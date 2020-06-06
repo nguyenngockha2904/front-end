@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>thực hàn các hộp thoại </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			//hộp thoại cảnh báo alert box cú pháp alert ();
+			function onAlert(){
+				alert("cảnh báo cảnh báo ");
+			}
+			//hộp thoại xác nhận confirm box cú pháp confirm() trả về kiểu bool
+			function onConfirm(){
+				var xacNhan; 
+				xacNhan = confirm("bạn đồng ý k ?");
+				if(xacNhan){
+					document.write("bạn bấm đồng ý");
+				}else{
+					document.write("bạn bấm huỷ");
+				}
+			
+			}
+			// hợp thoại nhập liệu Prompt box cú pháp prompt() trả về kiểu string 
+			function onPrompt(){
+				var ten ;
+				ten =prompt("vui lòng nhập tên");
+				document.write("chào "+ten+" đẹp trai");
+				//document.write("chào "+prompt("vui lòng nhập tên")+" đẹp trai");
+			}
+			
+			
+			
+		</script>
+		<input type = "button" id = "btnTb"  onclick="onAlert()" value="hộp thoại Thông báo"></input>
+		<input type = "button" id = "btnXn"  onclick="onConfirm()" value="hộp thoại Xác nhận"></input>
+		<input type = "button" id = "btnNl"  onclick="onPrompt()" value="hộp thoại Nhập Liệu"></input>
+	</body>
+</html>

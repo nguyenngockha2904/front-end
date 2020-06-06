@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<title>tổng hợp javaScripts</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type= "text/javaScript" src="validation.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<a class="tab" id ="dangky" href="#" onclick="onDangKy()" >Đăng kí</a>
+			<a class="tab" id ="dangNhap" href="#" onclick="onDangNhap()" >Đăng nhập</a>
+			<div id="tabDangKy" class="divForm">
+				<form	name="formDangKy" action ="trangchu.php">
+					<h2>Đăng ký thành viên</h2>
+					<hr/>
+					<p id="thongbao" style="text-align: center"></p>
+					<table class="tableDangKy">
+						<tr>
+							<td>
+								<span class="label">Tên đăng nhập </span>
+							</td>
+							<td>
+								<input type="text" class="textbox" id="txtTenDN" > </input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label">Mật khẩu</span>
+							</td>
+							<td>
+								<input type="text" class="textbox" id="txtMatKhau" > </input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label">email</span>
+							</td>
+							<td>
+								<input type="text" class="textbox" id="txtEmail"> </input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label">Nghề Nghiệp</span>
+							</td>
+							<td>
+								<select type="text" class="textbox" id="dropJob">
+									<option>Vui lòng chọn</option>
+									<option>Lập trình viên</option>
+									<option>bác sĩ</option>
+									<option>kỹ sư</option>
+								</select>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label">tuổi</span>
+							</td>
+							<td>
+								<input type="text" class="textbox" id="txtTuoi"> </input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label">tuổi</span>
+							</td>
+							<td>
+								<input type="radio" name="gioitinh" id="nam" />Nam
+								<input type="radio" name="gioitinh" id="nu" />Nữ
+							</td>
+						</tr>
+						<tr style="text-align:center">
+							<td colspan="2">
+								<input type="submit" name="btnDangKy" value="Đăng ký" id="btnSubmit"  onclick="return kiemTraHopLe()"/>
+							</td>
+						</tr>
+						<tr style="text-align:center">
+							<td colspan="2">
+							bạn đã có tài khoản vui lòng click <a href="#" onclick="onDangNhap()">Đăng nhập</a>
+							</td>
+						</tr>
+					</table>
+					
+				</form>
+			</div>
+			<div id="tabDangNhap" class="divForm">
+				<form	name="formDangNhap" action ="trangchu.php">
+					<h2>Đăng Nhập</h2>
+					<hr/>
+					<table class="tableDangKy">
+						<tr>
+							<td>
+								<span class="label">Tên đăng nhập </span>
+							</td>
+							<td>
+								<input type="text" class="textbox" id="txtDN"> </input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label">Mật khẩu</span>
+							</td>
+							<td>
+								<input type="text" class="textbox" id="txtMK"> </input>
+							</td>
+						</tr>
+						
+						<tr style="text-align:center">
+							<td colspan="2">
+								<input type="submit" name="btnDangKy" value="Đăng Nhập" id="btnDangNhap" />
+							</td>
+						</tr>
+						<tr style="text-align:center">
+							<td colspan="2">
+							bạn chưa có tài khoản vui lòng click <a href="#" onclick="onDangKy()">Đăng Ký</a>
+							</td>
+						</tr>
+					</table>
+					
+				</form>
+			</div>
+			
+				
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>tạo table động</title>
+		<meta chatset="utf-8">
+	</head>
+	<body>
+		<form action="#">
+			Số dòng : <input type="text" id="txtSd" placeholder="nhập số dòng"></input>
+			</br>
+			Số cột :   <input type ="text" id="txtSc" placeholder="nhập số cột"></input>
+			</br>	
+			<input type="button" value="tạo table" onclick="TaoTable()"></input>
+		</form>
+		<div id="Container">
+		</div>
+		<script type ="text/javascript">
+			function TaoTable(){
+			var txtSd=document.getElementById("txtSd");
+			var txtSc=document.getElementById("txtSc");
+			var divContainer=document.getElementById("Container");
+			if(isNaN(txtSd.value)||isNaN(txtSc.value)){
+				alert("vui lòng nhập số dòng và số cột");
+				
+			}else{
+				//tao table 
+				/*
+					<table>
+						<tr>  tạo dòng
+							<td></td> //  tạo cột
+						</tr>
+					</table>
+				*/
+				var sd=parseInt(txtSd.value);
+				var sc=parseInt(txtSc.value);
+				
+				//tao table 
+				
+				var tagTable=document.createElement("table");
+				tagTable.border=1;
+				for( i =1 ; i<=sd ; i++){
+					var tagtr =document.createElement("tr");
+					
+					for(j=1 ; j<=sc ; j++ ){
+					var tagtd= document.createElement("td");
+					var note = document.createTextNode(i +":"+j);
+					tagtd.appendChild(note);
+					tagtr.appendChild(tagtd);
+					}
+					tagTable.appendChild(tagtr);
+				}
+				//add table 
+				var tagBr= document.createElement("br");
+				divContainer.appendChild(tagBr);
+				divContainer.appendChild(tagTable);
+				
+			}
+			
+			
+			}
+		</script>
+	</body>
+</html>

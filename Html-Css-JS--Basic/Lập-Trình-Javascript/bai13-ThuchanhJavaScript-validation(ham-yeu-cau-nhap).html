@@ -1,0 +1,120 @@
+<html>
+
+	<head>
+		<title> Validation hàm kiểm tra </title>
+		<meta charset="utf-8">
+	</head>
+	
+	<body>
+		<form name="form1" action="trangchu.php" >
+			kiêm tra rỗng : <input type="text" name ="username" ></input>
+			</br>	
+			<input type="submit" value="kiểm tra nhập" onclick="return kiemtranhap()" ></input>
+			</br>
+			kiểm tra chữ <input type="text" id ="letters"></input>
+			</br>
+			<input type="button" value="kiểm tra tất cả là chữ " onclick="return kiemtrakytunhap('letters')" ></input>
+			</br>
+			kiểm tra số <input type="text" id ="number"></input>
+			</br>
+			<input type="button" value="kiểm tra số " onclick="return kiemtraso('number')" ></input>
+			</br>
+			kiểm tra email <input type="text" id ="email"></input>
+			</br>
+			<input type="button" value="kiểm tra email " onclick="return kiemtraEmail('email')" ></input>
+			</br>
+			kiểm tra độ dài chuỗi <input type="text" id ="stringMM"></input>
+			</br>
+			<input type="button" value="kiểm tra độ dài chuỗi " onclick="return kiemtraMinMaxString('stringMM',8,12)" ></input>
+			
+			
+		</form>
+		<p id ="thongbao"></p>
+		<script type ="text/javascript">
+			 function kiemtranhap(){
+				//var inputName= document.forms["form1"]["username"];
+				var inputName=document.form1.username;
+				var getName= inputName.value;
+				var theP=document.getElementById("thongbao");
+				if(getName ==""){
+					//alert("vui lòng nhập tên");
+					theP.style.display="block";
+					theP.innerHTML= "vui lòng không rỗng";
+					theP.style.color="red";
+					return false; // dừng form lại ko chuyển đến trangchu.php khi mình click submit
+				}else{
+					//alert("cảm ơn đã nhập ");
+					the.style.display="none";
+					return true; 
+					
+				}
+			 }
+			 function kiemtrakytunhap(idtag){
+				var input=document.getElementById(idtag);
+				var letters=/^[A-Za-z]+$/;
+				
+				var theP=document.getElementById("thongbao");
+				
+				if(input.value.match(letters)){
+					theP.style.display="none";
+					return true;
+				}else{
+					theP.style.display="block";
+					theP.innerHTML="vui lòng nhập chữ";
+					theP.style.color="red";
+					return false;
+				}
+				
+			 }
+			 function kiemtraso(idtag){
+				var input =document.getElementById(idtag);
+				var number= /^[0-9]+$/
+				var theP=document.getElementById("thongbao");
+				
+				if(input.value.match(letters)){
+					theP.style.display="none";
+					return true;
+				}else{
+					theP.style.display="block";
+					theP.innerHTML="vui lòng nhập số";
+					theP.style.color="red";
+					return false;
+				}
+			 }
+			function kiemtraEmail(idtag){
+			var input =document.getElementById(idtag);
+				var email= /^[\w\.]+@([a-zA-Z0-9\-])+\.([a-zA-Z]{2,4})(\.[a-zA-Z]{2,4})?$/;
+				var theP=document.getElementById("thongbao");
+				
+				if(input.value.match(email)){
+					theP.style.display="none";
+					return true;
+				}else{
+					theP.style.display="block";
+					theP.innerHTML="email phải là ###@gamil.com";
+					theP.style.color="red";
+					return false;
+				}
+			}
+			function kiemtraMinMaxString(idText,minLength,maxlength){
+				var input=document.getElementById(idText);
+				var field=input.value;
+				var theP=document.getElementById("thongbao");
+				if(field.length<minLength || field.length> maxlength){
+					//alert("vui lòng nhập tên");
+					theP.style.display="block";
+					theP.innerHTML= "hãy nhập vào giá trị từ "+minLength+" đến "+maxlength;
+					theP.style.color="red";
+					return false;
+					
+				}else{
+					theP.style.display="none";
+					return true;
+				}
+						
+			}
+				
+		</script>
+	</body>
+
+</html>
