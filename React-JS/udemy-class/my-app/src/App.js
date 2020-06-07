@@ -32,17 +32,20 @@ class App extends Component {
     this.getUsers();
   }
   render() {
+    const { loading, users } = this.state;
     return (
       <div className="App">
+        <form onSubmit={this.handleSubmit}>
+          <input type="submit" value="load users" />
+        </form>
+        <hr/>
         {!this.state.loading ?
           (this.state.users.map(user =>
-            <div>
-              <h3> {user.name.first}</h3>
+            <div key={user.id.value}>
+              <h3 style={{ color: 'red' }}> {user.name.first}</h3>
               <p>{user.email}</p>
               <hr />
-              <form onSubmit={this.handleSubmit}>
-                <input type="submit" value="load users" />
-              </form>
+
             </div>))
           : <Loading message="hello everyone" />}
 
