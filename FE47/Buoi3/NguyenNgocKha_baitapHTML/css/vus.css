@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+.clean-both{
+    clear: both;
+}
+.textAlignleft{
+    text-align: left;
+}
+.textAlignRight{
+    text-align: right;
+}
+#header{
+    width: 100%;
+    height: 100px;  
+    float: left;
+}
+#header .headerLeft ,#header .headerRight{
+    width: 49%;
+    display: inline-block;
+}
+#header .headerRight{
+    padding-right: 110px;
+}
+#container #tag {
+    border-top: 0.5px gray solid;
+    border-bottom: 0.5px gray solid;
+}
+#tag ul{
+}
+#tag ul li {
+    display: inline-block;
+    padding: 0 8px 0 8px;
+    
+}
+#tag ul li a {
+    text-decoration: none;
+    color: #686868;
+    font-weight: bold;
+    font-size: 15px;
+}
+#slider{
+    padding-top: 15px;
+}
+#slider img{
+    width: 100%;
+    height: 100%;
+}
+#GioiThieu {
+    width: 94%;
+    margin: 10px auto;
+}
+#GioiThieu h2,#CacKhoaHoc h2{
+    letter-spacing: 2px;
+    color: #323232;
+    font-size: 20px;
+    text-align: center;
+}
+#GioiThieu img,#CacKhoaHoc img{
+    margin: 0px 25%;
+}
+#GioiThieu p{
+    text-align: justify;
+    color: #686868;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}

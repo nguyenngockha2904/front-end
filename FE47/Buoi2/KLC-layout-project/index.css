@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+#logo{
+    height: 60px;
+}
+#menu{
+    background-color: black;
+    padding: 10px;
+}
+#menu ul{
+    list-style-type: none;
+}
+#menu ul li {
+    display: inline-block;
+}
+.tabMenu{
+    text-decoration: none;
+    padding-right: 30px;
+    color: aliceblue;
+    font-size: 15px;
+    
+}
+#slider{
+    margin-top: 5px;
+}
+#info{
+    letter-spacing: 2px;
+    text-align: justify;
+    color: black;
+}
+.spLeft ,.spRight{
+    float: left;
+    width: 50%;
+}
+.intro-product-item{
+    padding: 10px;
+    float: left;
+}
+.intro-product-item img{
+    width: 100%;
+}
+.width-50{
+    width: 50%;
+}
+.width-100{
+    width: 100%;
+}
+.clean-both{
+    clear: both;
+}
+#best-seller{
+    text-align: center;
+    letter-spacing: 2px;
+}
+.DescriptionSp{
+    font-size: 12px;
+}
+.btnCT{
+    color: white;
+    background-color: red;
+    float: left;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10%;
+
+}
+.item{
+    float: left;
+    width: 25%;
+    padding: 5px 10px 5px 10px;
+}
+.decsription{
+    text-align: justify;
+    font-size: 12px;
+    float: left;
+}
+.imgSp{
+    text-align: justify;
+    float: left;
+    width: 100%;
+}
+.title1{
+    float: left;
+    font-size: 25px;
+}
+#divBanner{
+    height: 400px;
+    background-image: url(./img-layout-2/nature.jpg);
+    background-size: cover;
+    position: relative;
+
+}
+#divBanner img{
+    width: 100%;
+    height: 100%;
+}
+#saleoff{
+    height: 300px;
+    width: 300px;
+    background-color: rgba(255, 0, 0,0.6);
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+#divBanner #saleoff p:nth-child(2){
+    font-size: 50px;
+    left: 15%;
+}
+#divBanner #saleoff h2 , #divBanner #saleoff p{
+    color: white;
+    text-align: center;
+}
+
+.service{
+    width: 60%;
+    margin: 20px auto;
+}
+.service_item{
+    width: 33.333333%;
+    float: left;
+    text-align: center;
+}
+.service_item i{
+    font-size: 100px;
+    color: black;
+}
+.divEnd{
+    background-color: black;
+    height: 200px;
+    padding-top: 1px;
+    margin-top: 20px;
+}
+.divEnd h2 , p {
+    color: white;
+    text-align: center;
+}
