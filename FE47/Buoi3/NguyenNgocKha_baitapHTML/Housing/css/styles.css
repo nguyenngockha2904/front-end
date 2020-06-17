@@ -187,6 +187,10 @@ header {
   text-decoration: none;
   letter-spacing: 1px;
   padding: 0 13px;
+  transition: all 0.5s;
+}
+.blog__item a:hover {
+  color: black;
 }
 .blog__item p {
   font-size: 17px;
@@ -258,5 +262,23 @@ header {
   color: white;
 
   font-weight: 500;
+}
+/* #endregion */
+
+/* #region Subscribe*/
+.subscribe {
+  text-align: center;
+  background-color: #00cdce;
+}
+.subscribe p {
+  color: white;
+  width: 62%;
+  margin: 1rem auto;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+.subscribe__form {
+}
+.btn-click {
 }
 /* #endregion */
