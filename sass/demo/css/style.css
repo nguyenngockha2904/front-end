@@ -1,0 +1,22 @@
+h1 {
+  color: red;
+  font-size: 40px;
+  letter-spacing: 10px;
+  margin-top: 40px; }
+
+.headertest h2 {
+  font-size: 40px;
+  font-weight: normal;
+  color: blue;
+  transition: all 0.5s; }
+  .headertest h2:hover {
+    color: yellow;
+    font-size: 20px; }
+.headertest span {
+  color: red;
+  letter-spacing: 10px; }
+.headertest p {
+  color: green;
+  margin-top: 40px; }
+
+/*# sourceMappingURL=style.css.map */

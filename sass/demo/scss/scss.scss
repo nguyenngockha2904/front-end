@@ -1,0 +1,33 @@
+// bien
+$about-heading-color: red;
+$heading-font-size: 40px;
+$heading-letter-spacing: 10px;
+$about-heading-margin-top: 40px;
+h1 {
+  color: $about-heading-color;
+  font-size: $heading-font-size;
+  letter-spacing: $heading-letter-spacing;
+  margin-top: $about-heading-margin-top;
+}
+.headertest {
+  h2 {
+    font : {
+      size: 40px;
+      weight: normal;
+    }
+    color: blue;
+    transition: all 0.5s;
+    &:hover {
+      color: yellow;
+      font-size: 20px;
+    }
+  }
+  span {
+    color: red;
+    letter-spacing: 10px;
+  }
+  p {
+    color: green;
+    margin-top: 40px;
+  }
+}
