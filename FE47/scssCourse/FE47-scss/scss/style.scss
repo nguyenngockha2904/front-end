@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@mixin tag($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  height: 100%;
+  text-align: center;
+  padding: 50px;
+  letter-spacing: 2px;
+}
+@mixin content($bg-color, $text-color, $width) {
+  background-color: $bg-color;
+  color: $text-color;
+  width: $width;
+  height: 100%;
+  text-align: center;
+  padding: 100px;
+  letter-spacing: 2px;
+}
+header {
+  @include tag(red, white);
+}
+.container {
+  display: flex;
+  .divleft {
+    @include content(green, white, 80%);
+  }
+  .divright {
+    @include content(aqua, white, 20%);
+  }
+}
+footer {
+  @include tag(blue, white);
+}

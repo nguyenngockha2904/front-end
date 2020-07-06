@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+header {
+  background-color: red;
+  color: white;
+  height: 100%;
+  text-align: center;
+  padding: 50px;
+  letter-spacing: 2px; }
+
+.container {
+  display: flex; }
+  .container .divleft {
+    background-color: green;
+    color: white;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 100px;
+    letter-spacing: 2px; }
+  .container .divright {
+    background-color: aqua;
+    color: white;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    padding: 100px;
+    letter-spacing: 2px; }
+
+footer {
+  background-color: blue;
+  color: white;
+  height: 100%;
+  text-align: center;
+  padding: 50px;
+  letter-spacing: 2px; }
+
+/*# sourceMappingURL=style.css.map */

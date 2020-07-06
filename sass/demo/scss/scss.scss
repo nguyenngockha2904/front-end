@@ -1,8 +1,5 @@
 // bien
-$about-heading-color: red;
-$heading-font-size: 40px;
-$heading-letter-spacing: 10px;
-$about-heading-margin-top: 40px;
+@import "variable";
 h1 {
   color: $about-heading-color;
   font-size: $heading-font-size;
@@ -29,5 +26,13 @@ h1 {
   p {
     color: green;
     margin-top: 40px;
+  }
+}
+
+@each $social in $socials {
+  .#{$social} {
+    background-image: url("#{$social}.png");
+    width: 16px;
+    height: 16px;
   }
 }

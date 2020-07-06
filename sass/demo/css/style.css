@@ -19,4 +19,24 @@ h1 {
   color: green;
   margin-top: 40px; }
 
+.twitter {
+  background-image: url("twitter.png");
+  width: 16px;
+  height: 16px; }
+
+.linkedin {
+  background-image: url("linkedin.png");
+  width: 16px;
+  height: 16px; }
+
+.pinterest {
+  background-image: url("pinterest.png");
+  width: 16px;
+  height: 16px; }
+
+.facebook {
+  background-image: url("facebook.png");
+  width: 16px;
+  height: 16px; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,37 @@
+//variable color
+$color-primary: #ff4f81;
+$color-black-0: #282828;
+$color-black-1: #141415;
+$color-white-0: #fff;
+$color-gray-0: #999;
+$color-gray-1: #6b6b6b;
+$color-gray-2: #8b8b96;
+$color-gray-3: #888;
+$color-gray-4: #e0e1e2;
+$color-pink-0: #ec1955;
+$color-blue-0: #12ccc3;
+$color-blue-1: #00a98f;
+//variable font-size
+$fs-0: 14px;
+$fs-1: 15px;
+
+//variable padding
+
+//variable margin
+
+//variable font-weight
+$fw-normal: normal;
+$fw-bold-0: 300;
+$fw-bold-1: 600;
+$fw-bold-2: 700;
+$fw-bold-3: 900;
+$fw-bold: bold;
+
+//breakpoints
+$breakpoints: (
+  "max-sreen": 1400px,
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);
