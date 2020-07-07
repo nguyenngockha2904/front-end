@@ -1,0 +1,4 @@
+.Button-instruction {
+  @include button(transparent, $color-primary);
+  border: 1px solid $color-white-0;
+}

@@ -1,0 +1,92 @@
+#testimonials {
+  background-image: url(../../images/banner3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 6em 0;
+  margin: 6em 0;
+  .container {
+    .subtitle__title {
+      p {
+        color: $color-white-0;
+      }
+    }
+
+    .slick__carousel {
+      background: rgba(0, 0, 0, 0.47);
+      box-shadow: 0px 1px 7px $color-gray-2;
+      border-radius: 5px;
+      padding: 3em 0;
+      .slick-arrow {
+        display: none !important;
+      }
+      .item {
+        .testimonials__info {
+          margin: 1em;
+          .info__top {
+            padding: 1em 1.5em;
+            background: rgba(0, 0, 0, 0.47);
+            position: relative;
+            border-radius: 5px;
+            p {
+              color: $color-white-0;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 27%;
+              width: 0;
+              height: 0;
+              border-top: 9px solid rgba(0, 0, 0, 0.47);
+              border-right: 9px solid transparent;
+              border-left: 9px solid transparent;
+            }
+          }
+          .info__bottom {
+            margin: 2em auto 0;
+            width: 55%;
+            display: flex;
+            .info__bottom__img {
+              width: 28%;
+              img {
+                width: 100%;
+                vertical-align: middle;
+              }
+            }
+            .info__bottom__content {
+              color: $color-white-0;
+              margin-left: 17px;
+              white-space: nowrap;
+              h5 {
+                color: $color-white-0;
+                font-size: 1.1em;
+                margin: 0;
+                font-weight: 600;
+              }
+              p {
+                color: $color-primary;
+                font-size: 0.9em;
+                margin: 0.5em 0 0;
+              }
+            }
+          }
+        }
+        &:visited {
+          border: none;
+        }
+      }
+      .slick-dots {
+        bottom: 5%;
+        li {
+          button {
+            &::before {
+              color: $color-primary;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
