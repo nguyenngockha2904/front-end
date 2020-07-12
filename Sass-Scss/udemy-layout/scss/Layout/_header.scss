@@ -3,19 +3,31 @@
   .row {
     align-items: center;
   }
+  .navbar-toggler {
+    border: none;
+    .icon-bar {
+      background: $color-gray-4;
+      display: block;
+      width: 22px;
+      height: 4px;
+      border-radius: 5px;
+      margin: 2px 0;
+    }
+  }
+
   .navbar-brand {
-    flex-grow: 1;
+    flex-grow: 0.1;
     img {
       width: 110px;
     }
   }
   .categories {
-    flex-grow: 1;
+    flex-grow: 0.1;
     @include text($color-black-light, $fs-1, $fw-normal);
     align-self: center;
   }
   .input_search {
-    flex-grow: 5;
+    flex-grow: 4;
     .form-control {
       font-size: $fs-1;
       background-color: $color-gray-1;
@@ -60,14 +72,16 @@
     }
   }
   .navbar-nav {
-    justify-content: space-between;
     width: 100%;
     .nav-item {
+      margin-left: 10px;
       .nav-link {
         @include text($color-black-light, $fs-1, $fw-normal);
         padding: $pd-1 $pd-2;
+        display: inline-block;
         border-radius: $border-radius;
         border: 1px solid transparent;
+        white-space: nowrap;
       }
       &:hover .nav-link {
         background-color: $color-gray-1;
@@ -98,6 +112,16 @@
     .categories,
     .input_search {
       display: none;
+    }
+    .navbar-brand {
+      text-align: center;
+    }
+    .navbar-nav {
+      .nav-item {
+        .button {
+          display: block;
+        }
+      }
     }
   }
   @include respond-to("small") {
