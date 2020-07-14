@@ -229,3 +229,181 @@ for in sẽ lấy về vị trí của phần tử đó
 /*
 for of sẽ lấy về 1 đối tưởng của phần tử đó
 */
+// // ES5
+// function HocSinh(mahS, tentS) {
+//    this.maHS = mahS;
+//    this.hoTen = tentS;
+//    this.xuatTenHS = function () {
+//       console.log(this.maHS, this.hoTen);
+//    }
+// }
+// let hs = new HocSinh(1, 'Nguyen A');
+// hs.xuatTenHS();
+// // ES6
+// class HocSinh_ {
+//    maHS;
+//    tenHS;
+//    constructor(mahs, tenhs) {
+//       this.maHS = mahs;
+//       this.tenHS = tenhs;
+//    }
+//    xuatThongtinHS = () => {
+//       console.log(this.maHS,this.tenHS);
+//    }
+// xuatThongtinHS(){
+//    console.log(this.maHS,this.tenHS);
+// }
+
+// }
+// let hs1 = new HocSinh_(1, 'nguyen B');
+// hs1.xuatThongtinHS();
+
+// import QuanLy from './QuanLy.js';
+// let ql=new QuanLy(1,'nguyen ngoc kha',[{maPb:5,tenPB:'CNTT'}]);
+
+// console.log(ql);
+
+let mangSP = [
+   { maSP: 1, tenSP: 'Sony Xperia X22', giaTien: 17500000, hangSX: 'SONY' },
+   { maSP: 2, tenSP: 'Sony Xperia XZ1', giaTien: 15500000, hangSX: 'SONY' },
+   { maSP: 3, tenSP: 'Google Pixel XL', giaTien: 27500000, hangSX: 'GOOGLE' },
+   { maSP: 4, tenSP: 'Google Pixel 2', giaTien: 17500000, hangSX: 'GOOGLE' },
+   { maSP: 5, tenSP: 'Samsung note 9', giaTien: 15500000, hangSX: 'SAMSUNG' },
+   { maSP: 6, tenSP: 'Samsung s10', giaTien: 27500000, hangSX: 'SAMSUNG' },
+   { maSP: 7, tenSP: 'Samsung s20 ultra', giaTien: 32500000, hangSX: 'SAMSUNG' },
+]
+// // let mangDtSony = mangSP.filter(sp => sp.hangSX === 'SONY');
+// // console.log(mangDtSony);
+// /* kq
+//    0: {maSP: 1, tenSP: "Sony Xperia X22", giaTien: 17500000, hangSX: "SONY"}
+//    1: {maSP: 2, tenSP: "Sony Xperia XZ1", giaTien: 15500000, hangSX: "SONY"}
+// */
+// let mangDtSony = mangSP.filter(sp => sp.giaTien >=20000000);
+// console.log(mangDtSony);
+// /* kq
+//    0: {maSP: 3, tenSP: "Google Pixel XL", giaTien: 27500000, hangSX: "GOOGLE"}
+//    1: {maSP: 6, tenSP: "Samsung s10", giaTien: 27500000, hangSX: "SAMSUNG"}
+//    2: {maSP: 7, tenSP: "Samsung s20 ultra", giaTien: 32500000, hangSX: "SAMSUNG"}
+// */
+
+// let timSP = mangSP.find(sp => sp.maSP === 3);
+// console.log(timSP);
+/* kq
+      {maSP: 3, tenSP: "Google Pixel XL", giaTien: 27500000, hangSX: "GOOGLE"}
+*/
+// let timSP = mangSP.find(sp => sp.maSP === 13);
+// console.log(timSP);
+/* kq
+     undefined
+*/
+// let timSP = mangSP.find(sp => sp.hangSX === 'SONY');
+// console.log(timSP);
+/* kq
+     {maSP: 1, tenSP: "Sony Xperia X22", giaTien: 17500000, hangSX: "SONY"}
+*/
+// let index = mangSP.findIndex(sp => sp.maSP === 1);
+// if(index!==-1){
+//    mangSP.splice(index,1);
+//    console.log(mangSP);
+// }else{
+//    console.log(index);
+// }
+
+// mangSP.forEach((sp, index) => {
+//    console.log(sp);
+// })
+
+/* kq 
+   {maSP: 1, tenSP: "Sony Xperia X22", giaTien: 17500000, hangSX: "SONY"}
+   {maSP: 2, tenSP: "Sony Xperia XZ1", giaTien: 15500000, hangSX: "SONY"}
+   {maSP: 3, tenSP: "Google Pixel XL", giaTien: 27500000, hangSX: "GOOGLE"}
+   {maSP: 4, tenSP: "Google Pixel 2", giaTien: 17500000, hangSX: "GOOGLE"}
+   {maSP: 5, tenSP: "Samsung note 9", giaTien: 15500000, hangSX: "SAMSUNG"}
+   {maSP: 6, tenSP: "Samsung s10", giaTien: 27500000, hangSX: "SAMSUNG"}
+   {maSP: 7, tenSP: "Samsung s20 ultra", giaTien: 32500000, hangSX: "SAMSUNG"}
+*/
+
+// let mang = mangSP.forEach((sp, index) => {
+//    console.log(sp);
+//    return sp;
+// })
+// console.log(mang);
+// // kq : 
+
+// let mangmoi =mangSP.map((sp,index) =>{
+//    if(sp.giaTien<20000000){
+//       return sp;
+//    }
+// })
+//  console.log(mangmoi);
+
+/* kq
+(7) [{…}, {…}, undefined, {…}, {…}, undefined, undefined]
+   0: {maSP: 1, tenSP: "Sony Xperia X22", giaTien: 17500000, hangSX: "SONY"}
+   1: {maSP: 2, tenSP: "Sony Xperia XZ1", giaTien: 15500000, hangSX: "SONY"}
+   2: undefined
+   3: {maSP: 4, tenSP: "Google Pixel 2", giaTien: 17500000, hangSX: "GOOGLE"}
+   4: {maSP: 5, tenSP: "Samsung note 9", giaTien: 15500000, hangSX: "SAMSUNG"}
+   5: undefined
+   6: undefined
+*/
+// let mangmoi = mangSP.filter((sp, index) => {
+//    if (sp.giaTien < 20000000) {
+//       return sp;
+//    }
+// })
+// console.log(mangmoi);
+/* kq
+(4) [{…}, {…}, {…}, {…}]
+   0: {maSP: 1, tenSP: "Sony Xperia X22", giaTien: 17500000, hangSX: "SONY"}
+   1: {maSP: 2, tenSP: "Sony Xperia XZ1", giaTien: 15500000, hangSX: "SONY"}
+   2: {maSP: 4, tenSP: "Google Pixel 2", giaTien: 17500000, hangSX: "GOOGLE"}
+   3: {maSP: 5, tenSP: "Samsung note 9", giaTien: 15500000, hangSX: "SAMSUNG"}  
+*/
+
+// let tongTien = mangSP.reduce((TT, sp, index) => {
+//    return TT += sp.giaTien;
+// }, 0);
+// console.log(tongTien);
+// kq : 153500000
+
+// let mangDTSony = mangSP.reduce((mangSony,sp,index)=>{
+//    if(sp.hangSX==='SONY'){
+//       mangSony.push(sp);
+//    }
+//    return mangSony;
+// },[]);
+// console.log(mangDTSony);
+/*
+(2) [{…}, {…}]
+   0: {maSP: 1, tenSP: "Sony Xperia X22", giaTien: 17500000, hangSX: "SONY"}
+   1: {maSP: 2, tenSP: "Sony Xperia XZ1", giaTien: 15500000, hangSX: "SONY"}
+*/
+
+// let mangsp_reverse=mangSP.reverse();
+// console.log(mangsp_reverse);
+
+/*
+(7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
+   0: {maSP: 7, tenSP: "Samsung s20 ultra", giaTien: 32500000, hangSX: "SAMSUNG"}
+   1: {maSP: 6, tenSP: "Samsung s10", giaTien: 27500000, hangSX: "SAMSUNG"}
+   2: {maSP: 5, tenSP: "Samsung note 9", giaTien: 15500000, hangSX: "SAMSUNG"}
+   3: {maSP: 4, tenSP: "Google Pixel 2", giaTien: 17500000, hangSX: "GOOGLE"}
+   4: {maSP: 3, tenSP: "Google Pixel XL", giaTien: 27500000, hangSX: "GOOGLE"}
+   5: {maSP: 2, tenSP: "Sony Xperia XZ1", giaTien: 15500000, hangSX: "SONY"}
+   6: {maSP: 1, tenSP: "Sony Xperia X22", giaTien: 17500000, hangSX: "SONY"}
+*/
+
+// let mangSPtheoTen = mangSP.sort((sp_TiepTheo, sp) => {
+//    let tenSPTiepTheo=sp_TiepTheo.tenSP.toLowerCase();
+//    let tenSP=sp.tenSP.toLowerCase();
+//    if(tenSPTiepTheo>tenSP){
+//       return 1; //giữ nguyên
+//    }
+//    if(tenSPTiepTheo<tenSP){
+//       return -1; //đảo vị trí
+//    }
+//    return 1;
+// });
+// console.log(mangSPtheoTen);
+
