@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', 'Helvetica', sans-serif;
   font-size: 15px;
   color: #29303b;
   background-color: #fff;
@@ -109,26 +109,169 @@ body {
   #notice-streamer .carousel-fullscreen-sidebar {
     width: 100%;
     color: #fff; }
-    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__headline {
+    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content {
+      width: 80%; }
+      #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .notice-streamer__headline {
+        color: #fff;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1.17; }
+      #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .notice-streamer__text {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 1.67;
+        font-weight: 100; }
+      #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .input_search input {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 100;
+        border-right: none; }
+        #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .input_search input:focus {
+          box-shadow: none; }
+      #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .input_search .input-group-append .input-group-text {
+        background-color: #fff;
+        color: #ec5252; }
+        #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .input_search .input-group-append .input-group-text:hover {
+          background-color: #ec5252;
+          color: #fff;
+          border-color: #ec5252; }
+  @media screen and (max-width: 992px) {
+    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content {
+      width: 100%; } }
+  @media screen and (max-width: 768px) {
+    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content {
+      width: 70%; } }
+  @media screen and (max-width: 576px) {
+    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content {
+      width: 100%; }
+      #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .notice-streamer__headline {
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700; }
+      #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__content .input_search input {
+        font-size: 15px; } }
+
+#reviewCourse .courseAbvertise {
+  background: linear-gradient(-45deg, #ec5252 0%, #6e1a52 100%);
+  align-self: center; }
+  #reviewCourse .courseAbvertise .courseAbvertise__item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    justify-content: center; }
+    #reviewCourse .courseAbvertise .courseAbvertise__item .courseAbvertise_icon {
       color: #fff;
-      font-size: 40px;
+      float: left;
+      margin-right: 16px;
+      margin-top: -2px;
+      font-size: 47px;
+      height: 1em; }
+    #reviewCourse .courseAbvertise .courseAbvertise__item .courseAbvertise__text {
+      color: #fff; }
+      #reviewCourse .courseAbvertise .courseAbvertise__item .courseAbvertise__text h6 {
+        font-size: 17px;
+        display: block;
+        margin: 0;
+        font-weight: 600; }
+      #reviewCourse .courseAbvertise .courseAbvertise__item .courseAbvertise__text p {
+        margin: 0; }
+#reviewCourse .courseItems {
+  padding: 20px;
+  background-color: #fff; }
+  #reviewCourse .courseItems .courseItems__left {
+    background-color: #f7f8fa; }
+  #reviewCourse .courseItems .courseItems__right .nav-pills {
+    justify-content: space-between;
+    border-bottom: 1px solid #cacbcc;
+    margin-bottom: 10px; }
+    #reviewCourse .courseItems .courseItems__right .nav-pills .nav-item {
+      text-align: left; }
+      #reviewCourse .courseItems .courseItems__right .nav-pills .nav-item .nav-link {
+        padding: 2px;
+        padding-bottom: 12px;
+        width: 99%;
+        height: 100%;
+        color: #29303b;
+        border-radius: 0;
+        border-bottom: 5px solid #fff; }
+        #reviewCourse .courseItems .courseItems__right .nav-pills .nav-item .nav-link.active {
+          background-color: #fff;
+          color: #14171c;
+          border-color: #007791;
+          transition: all 0.5s; }
+  #reviewCourse .courseItems .courseItems__right .tab-content .tab__item {
+    padding-left: 0; }
+    #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick-arrow .slick-prev:before,
+    #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick-arrow .slick-next:before {
       font-style: normal;
-      font-weight: 700;
-      margin-bottom: 10px;
-      line-height: 1.17; }
-    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__text {
-      margin-bottom: 20px;
-      line-height: 1.17; }
-  @media screen and (max-width: 576px) {
-    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__headline {
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700; } }
-  @media screen and (max-width: 576px) {
-    #notice-streamer .carousel-fullscreen-sidebar .notice-streamer__headline {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      color: #007791 !important;
+      font-size: 24px; }
+    #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item {
+      margin: 20px 10px;
+      box-shadow: 0px 1px 3px 1px rgba(20, 23, 28, 0.1); }
+      #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__img {
+        height: 120px;
+        width: 100%; }
+      #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content {
+        padding: 20px 10px;
+        padding-bottom: 0; }
+        #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__name {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          font-weight: 700;
+          height: 42px;
+          font-size: 15px;
+          color: #29303b;
+          margin-bottom: 10px; }
+        #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__info {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 12px;
+          color: #686f7a;
+          margin-bottom: 10px; }
+        #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__quality .rating {
+          color: #f4c150;
+          font-size: 13px; }
+          #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__quality .rating .evaluatePoint {
+            font-weight: 700;
+            color: #505763;
+            font-size: small; }
+          #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__quality .rating .usersJoin {
+            font-size: 12px;
+            font-weight: 400;
+            color: #686f7a;
+            margin-left: 5px; }
+        #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__price {
+          color: #29303b;
+          display: flex;
+          justify-content: flex-end;
+          padding: 10px 20px;
+          align-items: center; }
+          #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__price .priceDefault {
+            margin-right: 10px;
+            text-decoration: line-through; }
+          #reviewCourse .courseItems .courseItems__right .tab-content .tab__item .slick__carousel .slick__item .slick__content .Course__price .price {
+            white-space: nowrap;
+            color: #29303b;
+            font-size: 18px;
+            font-weight: 700; }
+@media screen and (max-width: 1200px) {
+  #reviewCourse .courseAbvertise .courseAbvertise__item .courseAbvertise_icon {
+    display: none; } }
+@media screen and (max-width: 992px) {
+  #reviewCourse .courseItems .courseItems__left {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  #reviewCourse .courseAbvertise {
+    display: none; } }
 
 .btn--white {
   color: #686f7a;

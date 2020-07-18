@@ -1,0 +1,26 @@
+-1 test tư duy.
+-2 
+	1.Js Chạy trên đâu? client
+	2.Cái gì sử lý JS. browers Xử lý js
+	3.tại sao?	vì trong mỗi trình duyệt web có 1 cái js Engine (nổi tiếng hiện tại y8)
+			bên trong y8 gồm có 3 bộ con 
+				-1 là parser chịu trách nhiệm đọc code 
+					nếu đúng nó sẽ báo trong cosole và chuyển sang cho trasfer.
+					ko thì báo lỗi và dừng .
+				-2 là trasfer là bộ chuyển JS sang mã máy sau đó đua xuống excute xử lý.
+				-3 là execute.
+	4.hoisting là gì? là cơ chế cho phép sử dụng biến trước khi dc khai báo. đơn giản vì parser thu thập biến trước khi
+	đọc code nên mới có cơ chế hoisting.
+
+	5 declaration function nó hỗ trợ cơ chế hoisting cho phép gọi hàm trước khi khai báo 
+		calcSum();
+		function calcSum(){
+			console.log(1+1);
+		}
+	6 expression function ko hỗ trợ hoisting
+	calcSum(); ----> không thể gọi trước khi chưa khai báo
+	const calcSum= function(){     ->>>>>>>>>>>>>>> nên sài expression function
+		console.log(1+1);
+	}
+		
+		
