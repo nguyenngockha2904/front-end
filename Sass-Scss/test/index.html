@@ -1,130 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
+  <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
-  <!-- Styling for page -->
-  <link rel="stylesheet" href="public/css/app.css">
-  <!-- Bootstrap Side Drawer CSS -->
-  <link rel="stylesheet" href="public/css/side-drawer.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <style>
+    .popover {
+      color: #686f7a;
+      max-width: 350px;
+      padding: 20px;
+    }
 
-  <title>Bootstrap 4 Mobile-friendly Navigation Drawer Example</title>
+    .popover .popover-arrow h5 a {
+      white-space: normal;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.33;
+      letter-spacing: -.3px;
+      color: #505763;
+    }
+
+    .popover .popover-arrow p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      visibility: visible;
+      font-size: 15px;
+      line-height: 1.53;
+      letter-spacing: -.2px;
+      color: #686f7a;
+      padding-top: 10px;
+    }
+
+    .popover .popover-arrow ul {
+      list-style-type: circle;
+      font-size: 14px;
+      padding: 0px;
+      padding-left: 11px;
+    }
+
+    .popover .popover-arrow .d-flex .btn {
+      background-color: #ec5252;
+      transition: all 0.3s;
+    }
+
+    .popover .popover-arrow .d-flex .btn:hover {
+      background-color: #992337;
+    }
+
+    .popover .popover-arrow .d-flex i {
+      font-size: 25px;
+      font-weight: 100;
+      color: #ec5252;
+      transition: all 0.3s;
+    }
+
+    .popover .popover-arrow .d-flex i:hover {
+      color: #992337;
+    }
+  </style>
 </head>
 
-<body class="bg-light">
-  <!-- Begin Side Drawer -->
-  <div id="side-drawer" class="position-fixed">
-    <div class="h-100 bg-white">
-      <!-- Side Drawer Title -->
-      <div class="p-4 bg-dark">
-        <a href="#">
-          <h1 class="text-white">Home</h1>
-        </a>
+<body>
+  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left"
+    data-trigger="hover focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-template=' <div class="popover" role="popover">
+      <div class="popover-arrow"> Last updated: 07/2020 <h5><a href="#">The Complete Foundation Stock Trading Course</a>
+        </h5>
+        <p>Learn To Trade The Stock Market by A Trading Firm CEO. Inc: Technical Analysis, Candlesticks, Stocks, Day
+          Trading +++ </p>
+        <ul>
+          <li>Build professional-quality business intelligence reports from the ground up</li>
+          <li>Know the process that a company goes through to become a Publicly Traded Company.</li>
+          <li>Know the history of the Stock Market and it`s Evolution.</li>
+        </ul>
+        <div class=" d-flex align-items-center"> <div class="btn w-75 mr-4 text-white">Add to cart</div> <i
+            class="far fa-heart"></i> </div>
       </div>
-      <!-- Side Drawer Links -->
-      <ul id="links" class="list-group" onclick="closeSideDrawer()">
-        <a id="link-structure" href="#" class="list-group-item list-group-item-action border-0 rounded-0">jQuery</a>
-        <a id="link-css" href="#" class="list-group-item list-group-item-action border-0 rounded-0 active">Script</a>
-        <a id="link-javascript" href="#" class="list-group-item list-group-item-action border-0 rounded-0">.Net</a>
-        <a id="link-customization" href="#" class="list-group-item list-group-item-action border-0 rounded-0">Demo
-          Page</a>
+    </div>'>
+    Popover on left
+  </button>
+  <div class="popover" role="popover">
+    <div class="popover-arrow"> Last updated: 07/2020 <h5><a href="#">The Complete Foundation Stock Trading Course</a>
+      </h5>
+      <p>Learn To Trade The Stock Market by A Trading Firm CEO. Inc: Technical Analysis, Candlesticks, Stocks, Day
+        Trading +++ </p>
+      <ul>
+        <li>Build professional-quality business intelligence reports from the ground up</li>
+        <li>Know the process that a company goes through to become a Publicly Traded Company.</li>
+        <li>Know the history of the Stock Market and it`s Evolution.</li>
       </ul>
+      <div class=" d-flex align-items-center">
+        <div class="btn w-75 mr-4 text-white">Add to cart</div> <i class="far fa-heart"></i>
+      </div>
     </div>
   </div>
-  <div id="side-drawer-void" class="position-fixed d-none" onclick="closeSideDrawer()"></div>
-  <!-- End Side Drawer -->
 
-  <!-- Begin Top Navbar -->
-  <nav class="navbar navbar-dark bg-primary fixed-top">
-    <button class="navbar-toggler" type="button" onclick="openSideDrawer()">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <span class="navbar-text">
-      Project Name &copy; 2020
-    </span>
-  </nav>
-  <!-- End Top Navbar -->
 
-  <!-- Begin Main Content -->
-  <main class="container my-5 bg-white">
-    <div class="p-4 p-md-5">
-      <div class="d-none d-md-block">
-        <h1 class="display-4">Bootstrap 4 Mobile-friendly Navigation Drawer Example</h1>
-      </div>
-      <div class="d-md-none">
-        <h1>Bootstrap 4 Side Drawer Documentation</h1>
-      </div>
-      <div id="carbon-block" style="margin:2rem auto"></div>
-      <div style="margin:2rem auto">
-        <script type="text/javascript">< !--
-            google_ad_client = "ca-pub-2783044520727903";
-          /* jQuery_demo */
-          google_ad_slot = "2780937993";
-          google_ad_width = 728;
-          google_ad_height = 90;
-//-->
-        </script>
-        <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-        </script>
-      </div>
-      <hr>
-      <p class="lead">
-        A side drawer component for Bootstrap 4 to create a mobile-friendly off-canvas navigation drawer that can be
-        toggled by a hamburger button.
-      </p>
-    </div>
-  </main>
-  <!-- End Main Content -->
-
-  <!-- Bootstrap JavaScript -->
+  <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
-  <!-- Side Drawer JS -->
-  <script src="public/js/side_drawer.js"></script>
   <script>
-    try {
-      fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
-        return true;
-      }).catch(function (e) {
-        var carbonScript = document.createElement("script");
-        carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
-        carbonScript.id = "_carbonads_js";
-        document.getElementById("carbon-block").appendChild(carbonScript);
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    $(document).ready(function () {
+      $('[data-toggle="popover"]').popover();
+    });
   </script>
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36251023-1']);
-    _gaq.push(['_setDomainName', 'jqueryscript.net']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-
 </body>
 
 </html>

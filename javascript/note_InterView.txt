@@ -22,5 +22,20 @@
 	const calcSum= function(){     ->>>>>>>>>>>>>>> nên sài expression function
 		console.log(1+1);
 	}
-		
+	
+	trong ES5 không có Class nên để lập trình OOP ta cần phải biết đến prototype 
+		// khởi tạo đối tượng chó (prototype Chó)
+		//đây là function constructor (hàm khởi tạo đối tượng chó trong ES5)
+			const Cho = function (ten,chieuCao,canNang) {
+  		 	  this.ten = ten;
+    		  	  this.chieuCao = chieuCao;
+   		 	  this.canNang = canNang;
+   			  this.sua = function () {
+	        		  return this.ten;
+ 			   }
+
+			}
+		// là 1 instance thể hiện của đối tượng chó
+			const cho1=new Cho('lulu',50,12);
+			const cho2=new Cho('memeo',69,16);
 		

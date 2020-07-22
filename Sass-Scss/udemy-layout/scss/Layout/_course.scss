@@ -33,7 +33,23 @@
     padding: 20px;
     background-color: $color-white-0;
     .courseItems__left {
+      padding: 12%;
       background-color: $color-gray-5;
+      align-items: center;
+      .courseItems__left_content {
+        display: inline-block;
+        align-self: center;
+        .content1 {
+          font-size: 19px;
+          font-weight: 700;
+          line-height: 1.47em;
+        }
+        .content2 {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5em;
+        }
+      }
     }
     .courseItems__right {
       .nav-pills {
@@ -45,7 +61,7 @@
           .nav-link {
             padding: 2px;
             padding-bottom: 12px;
-            width: 99%;
+            width: 74%;
             height: 100%;
             color: $color-black-0;
             border-radius: 0;
@@ -53,6 +69,7 @@
             &.active {
               background-color: $color-white-0;
               color: #14171c;
+              width: 98%;
               border-color: $color-blue;
               transition: all 0.5s;
             }
@@ -63,92 +80,75 @@
         .tab__item {
           padding-left: 0;
           .slick__carousel {
-            .slick-arrow {
-              .slick-prev:before,
-              .slick-next:before {
-                font-style: normal;
-                font-weight: 400;
-                font-variant: normal;
-                text-transform: none;
-                line-height: 1;
-                color: #007791 !important;
-                font-size: 24px;
-              }
-            }
-            .slick__item {
-              margin: 20px 10px;
-              box-shadow: 0px 1px 3px 1px rgba(20, 23, 28, 0.1);
-
-              .slick__img {
-                height: 120px;
-                width: 100%;
-              }
-              .slick__content {
-                padding: 20px 10px;
-                padding-bottom: 0;
-                .Course__name {
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  white-space: normal;
-                  font-weight: 700;
-                  height: 42px;
-                  font-size: 15px;
-                  color: $color-black-0;
-                  margin-bottom: 10px;
-                }
-                .Course__info {
-                  display: block;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                  font-size: 12px;
-                  color: $color-gray-4;
-                  margin-bottom: 10px;
-                }
-                .Course__quality {
-                  .rating {
-                    color: $color-yellow;
-                    font-size: 13px;
-                    .evaluatePoint {
-                      font-weight: 700;
-                      color: $color-black-light;
-                      font-size: small;
-                    }
-                    .usersJoin {
-                      font-size: 12px;
-                      font-weight: 400;
-                      color: $color-gray-4;
-                      margin-left: 5px;
-                    }
-                  }
-                }
-                .Course__price {
-                  color: $color-black-0;
-                  display: flex;
-                  justify-content: flex-end;
-                  padding: 10px 20px;
-                  align-items: center;
-                  .priceDefault {
-                    margin-right: 10px;
-                    text-decoration: line-through;
-                  }
-                  .price {
-                    white-space: nowrap;
-                    color: $color-black-0;
-                    font-size: 18px;
-                    font-weight: 700;
-                  }
-                }
-              }
-            }
+            @include slickItem();
           }
         }
       }
     }
   }
   .coursePurpose {
+    background-color: $color-gray-5;
+    padding: 30px 0;
+
+    .slick__Purpose {
+      &.container {
+        padding: 0;
+      }
+      .slick-arrow {
+        display: none !important;
+      }
+      .purposeItem {
+        display: flex;
+        background-color: $color-white-0;
+        margin: 0 10px;
+        align-items: flex-start;
+        padding: 20px;
+        text-align: left;
+        height: 150px;
+        outline: none;
+        img {
+          border: 0;
+          height: auto;
+          vertical-align: middle;
+          color: $color-blue;
+          margin-right: 10px;
+        }
+        .purpose__content {
+          h4 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.47em;
+          }
+          p {
+            color: #686f7a;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+          }
+        }
+      }
+    }
   }
   .courseCarousel {
+    padding: 30px 0;
+    .container {
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.47em;
+        letter-spacing: 0.5px;
+        color: #505763;
+      }
+      .slick__courseCarousel {
+        @include slickItem();
+      }
+    }
+  }
+  @include respond-to("max-sreen") {
+    .courseItems {
+    }
+    .coursePurpose {
+    }
   }
   @include respond-to("extra-large") {
     .courseAbvertise {
@@ -161,39 +161,31 @@
   }
   @include respond-to("large") {
     .courseItems {
+      .container {
+        max-width: 100%;
+      }
       .courseItems__left {
         display: none;
       }
+    }
+    .courseCarousel {
+      .container {
+        max-width: 95%;
+      }
+    }
+  }
+  @include respond-to("medium") {
+    .courseAbvertise {
+      display: none;
+    }
+    .courseItems {
       .courseItems__right {
-        .nav-pills {
-          .nav-item {
-            .nav-link {
-            }
-          }
-        }
         .tab-content {
           .tab__item {
             .slick__carousel {
               .slick__item {
                 .slick__img {
-                }
-                .slick__content {
-                  .Course__name {
-                  }
-                  .Course__info {
-                  }
-                  .Course__quality {
-                    .rating {
-                    }
-                    .usersJoin {
-                    }
-                  }
-                  .Course__price {
-                    .priceDefault {
-                    }
-                    .price {
-                    }
-                  }
+                  height: auto;
                 }
               }
             }
@@ -202,9 +194,6 @@
       }
     }
   }
-  @include respond-to("medium") {
-    .courseAbvertise {
-      display: none;
-    }
+  @include respond-to("small") {
   }
 }
