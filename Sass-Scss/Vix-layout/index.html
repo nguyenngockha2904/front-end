@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./plugins/fontawesome-free-5.14.0-web/css/all.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="./plugins/slick/slick.css">
+    <link rel="stylesheet" href="./plugins/slick/slick-theme.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -17,11 +20,34 @@
 <body>
     <header>
         <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <div class="d-flex">
+                <a class="nav-link1" href="#">
+                    <img src="./img/avatar.png" alt="avatar" class="img-fluid" />
+                    <span>Đăng nhập</span>
+                </a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <img src="./img/next-session.png" alt="next-session" class="img-fluid">
+                </a>
+            </div>
+            <a href="#">Lịch chiếu</a>
+            <a href="#">Cụm rạp</a>
+            <a href="#">Tin tức</a>
+            <a href="#">Ứng dụng</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <span></i>Hồ Chí Minh</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Biên Hòa</a>
+                    <a class="dropdown-item" href="#">Nha Trang</a>
+
+                </div>
+            </div>
+
         </div>
 
         <!-- <h2>Animated Sidenav Example</h2>
@@ -33,7 +59,7 @@
 
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" onclick="openNav()">
-                <span class="navbar-toggler-icon"></span>
+                <img src="./img/menu-options.png" alt="menu-options" class="img-fluid">
             </button>
 
             <!-- Navbar links -->
@@ -72,25 +98,37 @@
                             <a class="dropdown-item" href="#">Hải Phòng</a>
                             <a class="dropdown-item" href="#">Biên Hòa</a>
                             <a class="dropdown-item" href="#">Nha Trang</a>
-                            <a class="dropdown-item" href="#">Bình Dương</a>
-                            <a class="dropdown-item" href="#">Phan Thiết</a>
-                            <a class="dropdown-item" href="#">Hạ Long</a>
-                            <a class="dropdown-item" href="#">Cần Thơ</a>
-                            <a class="dropdown-item" href="#">Vũng Tàu</a>
 
-                          </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
-
+    <section id="SlideShow">
+        <div class="slick__carousel">
+            <div class="item-carousel">
+                <img src="./img/film1.png" alt="film1" class="img-fluid">
+            </div>
+            <div class="item-carousel">
+                <img src="./img/film2.png" alt="film1" class="img-fluid">
+            </div>
+            <div class="item-carousel">
+                <img src="./img/film3.png" alt="film1" class="img-fluid">
+            </div>
+            <div class="item-carousel">
+                <img src="./img/film4.jpg" alt="film1" class="img-fluid">
+            </div>
+        </div>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./plugins/jquery/jquery-3.5.1.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./plugins/jquery/jquery-3.5.1.min.js"></script>
+    <!-- boostrap.bundle.min.js included popper.min.js and bootstrap.min.js -->
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./plugins/slick/slick.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- function open side navbar -->
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "60%";
@@ -100,6 +138,21 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
-</body>
+    <!-- Slick Carousel -->
+    <script>
+        $(document).ready(function () {
+            $(".slick__carousel").slick({
+                infinite: true,
+                speed: 200,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                dots:true,
+                responsive: [
+        ],
+            });
+        });
 
+    </script>
+</body>
 </html>

@@ -1,0 +1,17 @@
+#SlideShow{
+    padding-top: 60px;
+    .slick__carousel{
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-dots{
+            top: 92%;
+        }
+        .item-carousel{
+            width: 100%;
+            .img-fluid{
+                width: 100%;
+            }
+        }
+    }
+}

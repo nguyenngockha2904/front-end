@@ -1,0 +1,4 @@
+patch: gui thuoc tinh nao thi sua thuoc tinh do 
+put: ghi de
+post: tao moi
+get: lay 

@@ -5,10 +5,14 @@
 
 body {
   font-size: 14px;
-  line-height: 1.42857143; }
+  line-height: 1.42857143;
+  height: 5000px; }
 
 header {
-  background-color: transparent; }
+  background-color: rgba(255, 255, 255, 0.829);
+  position: fixed;
+  width: 100%;
+  z-index: 999; }
   header .sidenav {
     height: 100%;
     width: 0;
@@ -16,25 +20,37 @@ header {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #f1f1f1;
+    background-color: #ffffffeb;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px; }
+    box-shadow: 1px 0px 3px 1px #00000070; }
+    header .sidenav .d-flex {
+      justify-content: space-between; }
+      header .sidenav .d-flex .nav-link1 .img-fluid {
+        width: 35px;
+        height: auto;
+        border-radius: 50%; }
+      header .sidenav .d-flex .nav-link1 span {
+        font-size: 14px;
+        font-weight: 500; }
+      header .sidenav .d-flex .closebtn {
+        margin-right: 2%;
+        text-align: right; }
+        header .sidenav .d-flex .closebtn .img-fluid {
+          width: 16px;
+          height: auto; }
     header .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
       display: block;
-      transition: 0.3s; }
+      padding: 20px;
+      width: calc(100% - 40px);
+      font-size: 18px;
+      color: #000;
+      text-decoration: none; }
       header .sidenav a:hover {
         color: #f1f1f1; }
-    header .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px; }
+    header .sidenav .dropdown .dropdown-menu {
+      width: 80%;
+      text-align: center; }
   header .navbar {
     justify-content: center; }
     header .navbar .navbar-brand {
@@ -48,13 +64,19 @@ header {
     header .navbar .navbar-toggler {
       position: absolute;
       right: 1%;
-      transform: translateX(-1%); }
+      transform: translateX(-1%);
+      border: none; }
+      header .navbar .navbar-toggler .img-fluid {
+        width: 25px;
+        height: auto; }
     header .navbar .nav__menu .navbar-nav .nav-item .nav-link {
       color: #000;
       transition: all 0.2s;
       text-decoration: none;
       margin-right: 20px;
       font-weight: 500; }
+      header .navbar .nav__menu .navbar-nav .nav-item .nav-link:hover {
+        color: #fb4226; }
     header .navbar .nav__right {
       position: absolute;
       right: 1%;
@@ -65,7 +87,7 @@ header {
         header .navbar .nav__right .navbar-nav .nav-item .nav-link {
           position: relative; }
           header .navbar .nav__right .navbar-nav .nav-item .nav-link .img-fluid {
-            width: 40px;
+            width: 30px;
             height: auto;
             border-radius: 50%;
             margin-right: 7px; }
@@ -93,5 +115,16 @@ header {
         display: none; }
       header .navbar .nav__right {
         display: none; } }
+
+#SlideShow {
+  padding-top: 60px; }
+  #SlideShow .slick__carousel .slick-arrow {
+    display: none !important; }
+  #SlideShow .slick__carousel .slick-dots {
+    top: 92%; }
+  #SlideShow .slick__carousel .item-carousel {
+    width: 100%; }
+    #SlideShow .slick__carousel .item-carousel .img-fluid {
+      width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

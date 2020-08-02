@@ -6,10 +6,17 @@
 			bên trong y8 gồm có 3 bộ con 
 				-1 là parser chịu trách nhiệm đọc code 
 					nếu đúng nó sẽ báo trong cosole và chuyển sang cho trasfer.
+					-đồng bộ thì xử lý :
+						đưa vào stack xử lý
+					-bất đồng bộ thì xử lý: 
+						-đưa vào web APIs(ko đưa vào stack xử lý) xử lý sau đó đưa xuống
+						 hàng chờ callback queue 
+						-event loop kiểm tra nếu stack rỗng(các đồng bộ dc xử lý xog hết) thì nó sẽ 
+						báo cho các bất đồng bộ đưa lên stack.
 					ko thì báo lỗi và dừng .
 				-2 là trasfer là bộ chuyển JS sang mã máy sau đó đua xuống excute xử lý.
 				-3 là execute.
-	4.hoisting là gì? là cơ chế cho phép sử dụng biến trước khi dc khai báo. đơn giản vì parser thu thập biến trước khi
+	4.hoisting là gì? là cơ chế cho phép sử dụng biến trước khi dc khai báo. đơn giản vì parser thu thập biến,hàm trước khi
 	đọc code nên mới có cơ chế hoisting.
 
 	5 declaration function nó hỗ trợ cơ chế hoisting cho phép gọi hàm trước khi khai báo 
@@ -38,4 +45,21 @@
 		// là 1 instance thể hiện của đối tượng chó
 			const cho1=new Cho('lulu',50,12);
 			const cho2=new Cho('memeo',69,16);
-		
+call back function 
+ 1 hàm a được truyền vào 1 hàm b dưới dạng là 1 tham số đầu vào được gọi là callback function
+//demo callback function
+	const calcResult = function(callback){
+		var a=1;
+		var b=2;
+		callback(a,b);
+	}	
+	const sum= function(a+b){return a+b;} // callback function
+	const subtract=function(a+b){return a-b;} // callback function
+	
+	calcResult(sum);
+	calcResult(subtract);
+đồng bộ : là những code viết bt xử lý từ trên xuống dưới từng dòng .
+bất đồng bộ.
+	so về ưu tiên hàm đồng bộ ưu tiên hơn bất đồng bộ.
+	hàm đồng bộ sẽ  chạy hết sau đó mới chạy bất đồng bộ.
+
