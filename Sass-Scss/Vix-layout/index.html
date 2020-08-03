@@ -13,6 +13,8 @@
     <!-- Slick CSS -->
     <link rel="stylesheet" href="./plugins/slick/slick.css">
     <link rel="stylesheet" href="./plugins/slick/slick-theme.css">
+    <!-- Venobox -->
+    <link rel="stylesheet" href="./plugins/venobox/venobox.min.css" type="text/css" media="screen">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -109,17 +111,1242 @@
         <div class="slick__carousel">
             <div class="item-carousel">
                 <img src="./img/film1.png" alt="film1" class="img-fluid">
+                <a class="venobox btn-trailer" data-vbtype="video"
+                    href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img src="./img/play-video.png" alt="play-video"
+                        class="img-fluid"></a>
             </div>
             <div class="item-carousel">
                 <img src="./img/film2.png" alt="film1" class="img-fluid">
+                <a class="venobox btn-trailer" data-vbtype="video"
+                    href="https://www.youtube.com/watch?v=Fi2RvkKuP0k"><img src="./img/play-video.png" alt="play-video"
+                        class="img-fluid"></a>
             </div>
             <div class="item-carousel">
                 <img src="./img/film3.png" alt="film1" class="img-fluid">
+                <a class="venobox btn-trailer" data-vbtype="video"
+                    href="https://www.youtube.com/watch?v=gSSaTepQXGU"><img src="./img/play-video.png" alt="play-video"
+                        class="img-fluid"></a>
             </div>
             <div class="item-carousel">
                 <img src="./img/film4.jpg" alt="film1" class="img-fluid">
+                <a class="venobox btn-trailer" data-vbtype="video"
+                    href="https://www.youtube.com/watch?v=J8riYadR3Nk"><img src="./img/play-video.png" alt="play-video"
+                        class="img-fluid"></a>
             </div>
         </div>
+    </section>
+    <section id="searchTab">
+        <div class="searchTool container">
+            <div class="dropdown drop_film">
+                <button type="button" class="btn btn-light dropdown-toggle film" data-toggle="dropdown">
+                    Phim
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Bán Đảo - Peninsula - (C18)</a>
+                    <a class="dropdown-item" href="#">Big Hero 6</a>
+                    <a class="dropdown-item" href="#">Dinh Thự Oan Khuất - Ghost Of War - (C18)</a>
+                    <!-- <a class="dropdown-item" href="#">Hồn Ma Văn Sĩ - Ghost Writer - (C18)</a>
+                    <a class="dropdown-item" href="#">Kẻ Cuồng Sát - Unhinged - (C18)</a>
+                    <a class="dropdown-item" href="#">Cậu Bé Người Gỗ Pinocchio - Pinocchio - (P)</a>
+                    <a class="dropdown-item" href="#">Chuyến Du Lịch Chết Chóc - Outback - (C16)</a>
+                    <a class="dropdown-item" href="#">Đỉnh Mù Sương - Foggy Mountain - (C18)</a>
+                    <a class="dropdown-item" href="#">Tàn Tích Quỷ Ám - Relic - (C18)</a>
+                    <a class="dropdown-item" href="#">Hậu Duệ Thần Sấm - Mortal - (C16)</a>
+                    <a class="dropdown-item" href="#">Bằng Chứng Vô Hình - (C18)</a>
+                    <a class="dropdown-item" href="#">Yêu Nhau Mùa Ế - Low Season - (C16)</a>
+                    <a class="dropdown-item" href="#">Cuộc Phiêu Lưu Của Scooby-doo! - Scoob! - (P)</a>
+                    <a class="dropdown-item" href="#">Ngôi Đền Kì Quái - Pee Nak 2 - (C16)</a>
+                    <a class="dropdown-item" href="#">SÓI 100% - 100% WOLF - (P)</a> -->
+                </div>
+            </div>
+            <div class="dropdown drop_cine">
+                <button type="button" class="btn btn-light dropdown-toggle cine" data-toggle="dropdown">
+                    Rạp
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">BHD Star Bitexco</a>
+                    <a class="dropdown-item" href="#">BHD Star Vincom 3/2</a>
+                    <a class="dropdown-item" href="#">BHD Star Vincom Lê Văn Việt</a>
+                    <!-- <a class="dropdown-item" href="#">BHD Star Vincom Quang Trung</a> -->
+                    <!-- <a class="dropdown-item" href="#">BHD Star Vincom Thảo Điền</a>
+                    <a class="dropdown-item" href="#">BHD Star ‎Phạm Hùng</a>
+                    <a class="dropdown-item" href="#">CGV Aeon Bình Tân</a>
+                    <a class="dropdown-item" href="#">CGV Aeon Tân Phú</a>
+                    <a class="dropdown-item" href="#">CGV Crescent Mall</a>
+                    <a class="dropdown-item" href="#">CGV Giga Mall Thủ Đức</a>
+                    <a class="dropdown-item" href="#">CGV Hoàng Văn Thụ</a>
+                    <a class="dropdown-item" href="#">CGV Hùng Vương Plaza</a>
+                    <a class="dropdown-item" href="#">CGV IMC Trần Quang Khải</a>
+                    <a class="dropdown-item" href="#">CGV Liberty Citypoint</a>
+                    <a class="dropdown-item" href="#">CGV Liberty Citypoint</a>
+                    <a class="dropdown-item" href="#">CGV Lý Chính Thắng</a> -->
+                </div>
+            </div>
+            <div class="dropdown drop_date">
+                <button type="button" class="btn btn-light dropdown-toggle date" data-toggle="dropdown">
+                    Ngày xem
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hôm nay <p>01-08-2020</p></a>
+                    <!-- <a class="dropdown-item" href="#">Hôm ngày mai <p>02-08-2020</p></a> -->
+                    <!-- <a class="dropdown-item" href="#">Thứ 2 <p>03-08-2020</p></a> -->
+                    <!-- <a class="dropdown-item" href="#">Thứ 3 <p>04-08-2020</p></a> -->
+                    <!-- <a class="dropdown-item" href="#">Thứ 4 <p>05-08-2020</p></a>
+                    <a class="dropdown-item" href="#">Thứ 5 <p>06-08-2020</p></a>
+                    <a class="dropdown-item" href="#">Thứ 6 <p>07-08-2020</p></a>
+                    <a class="dropdown-item" href="#">Thứ 7 <p>08-08-2020</p></a>
+                    <a class="dropdown-item" href="#">chủ nhật <p>09-08-2020</p></a> -->
+                </div>
+            </div>
+            <div class="dropdown drop_suatChieu">
+                <button type="button" class="btn btn-light dropdown-toggle sChieu" data-toggle="dropdown">
+                    suất chiếu
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">11:30</a>
+                    <a class="dropdown-item" href="#">12:15</a>
+                    <a class="dropdown-item" href="#">13:45</a>
+                    <!-- <a class="dropdown-item" href="#">14:10</a> -->
+                    <!-- <a class="dropdown-item" href="#">15:35</a> -->
+                    <!-- <a class="dropdown-item" href="#">16:15</a>
+                    <a class="dropdown-item" href="#">17:40</a>
+                    <a class="dropdown-item" href="#">18:25</a>
+                    <a class="dropdown-item" href="#">19:10</a>
+                    <a class="dropdown-item" href="#">20:35</a>
+                    <a class="dropdown-item" href="#">21:15</a>
+                    <a class="dropdown-item" href="#">22:40</a>
+                    <a class="dropdown-item" href="#">7:25</a>
+                    <a class="dropdown-item" href="#">8:10</a>
+                    <a class="dropdown-item" href="#">9:15</a>
+                    <a class="dropdown-item" href="#">10:40</a>
+                    <a class="dropdown-item" href="#">11:25</a>
+                    <a class="dropdown-item" href="#">8:10</a> -->
+                </div>
+            </div>
+            <div class="button">
+                <button class="btn btn-dark">Mua vé xem</button>
+            </div>
+        </div>
+    </section>
+    <section id="homeMovies">
+        <div class=" container movies">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#DangChieu">Đang Chiếu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#SapChieu">Sắp Chiếu</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="DangChieu">
+                    <div class="slick-movie">
+                        <div class="slick-item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie1.png" alt="movie1" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.4</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Bán Đảo - Peninsula - (C18)</p>
+                                                <p class="time">116 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie2.jpg" alt="movie2" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.1</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>Big Hero 6</p>
+                                                <p class="time">102 phút-7.8 IMDb </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie3.png" alt="movie3" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.6</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Dinh Thự Oan Khuất - Ghost Of War -
+                                                    (C18)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie4.png" alt="movie4" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.8</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Hồn Ma Văn Sĩ - Ghost Writer - (C18)
+                                                </p>
+                                                <p class="time">97 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie5.png" alt="movie5" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.1</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Kẻ Cuồng Sát - Unhinged - (C18)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie6.png" alt="movie6" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.1</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>Cậu Bé Người Gỗ Pinocchio - Pinocchio -
+                                                    (P)</p>
+                                                <p class="time">125 phút</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie7.png" alt="movie7" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.2</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Chuyến Du Lịch Chết Chóc - Outback -
+                                                    (C16)</p>
+                                                <p class="time">86 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie8.jpg" alt="movie8" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.5</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Đỉnh Mù Sương - Foggy Mountain - (C18)
+                                                </p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie9.png" alt="movie9" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Tàn Tích Quỷ Ám - Relic - (C18)</p>
+                                                <p class="time">89 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie10.png" alt="movie10" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Hậu Duệ Thần Sấm - Mortal - (C16)</p>
+                                                <p class="time">104 phút</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie11.jpg" alt="movie11" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.7</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Bằng Chứng Vô Hình - (C18)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie12.png" alt="movie12" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.3</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Yêu Nhau Mùa Ế - Low Season - (C16)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie13.png" alt="movie13" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.8</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>Cuộc Phiêu Lưu Của Scooby-doo! - Scoob! -
+                                                    (P)</p>
+                                                <p class="time">100 phút - 5.7 IMDb</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie14.png" alt="movie14" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">5.6</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Ngôi Đền Kì Quái - Pee Nak 2 - (C16)
+                                                </p>
+                                                <p class="time">115 phút</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie15.png" alt="movie15" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.6</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>SÓI 100% - 100% WOLF - (P)</p>
+                                                <p class="time">96 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="SapChieu">
+                    <div class="slick-movie">
+                        <div class="slick-item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie1.png" alt="movie1" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.4</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Bán Đảo - Peninsula - (C18)</p>
+                                                <p class="time">116 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie2.jpg" alt="movie2" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.1</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>Big Hero 6</p>
+                                                <p class="time">102 phút-7.8 IMDb </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie3.png" alt="movie3" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.6</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Dinh Thự Oan Khuất - Ghost Of War -
+                                                    (C18)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie4.png" alt="movie4" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.8</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Hồn Ma Văn Sĩ - Ghost Writer - (C18)
+                                                </p>
+                                                <p class="time">97 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie5.png" alt="movie5" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.1</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Kẻ Cuồng Sát - Unhinged - (C18)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie6.png" alt="movie6" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.1</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>Cậu Bé Người Gỗ Pinocchio - Pinocchio -
+                                                    (P)</p>
+                                                <p class="time">125 phút</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie7.png" alt="movie7" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.2</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Chuyến Du Lịch Chết Chóc - Outback -
+                                                    (C16)</p>
+                                                <p class="time">86 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie8.jpg" alt="movie8" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.5</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Đỉnh Mù Sương - Foggy Mountain - (C18)
+                                                </p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-item">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie9.png" alt="movie9" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Tàn Tích Quỷ Ám - Relic - (C18)</p>
+                                                <p class="time">89 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie10.png" alt="movie10" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Hậu Duệ Thần Sấm - Mortal - (C16)</p>
+                                                <p class="time">104 phút</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie11.jpg" alt="movie11" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.7</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C18</span>Bằng Chứng Vô Hình - (C18)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie12.png" alt="movie12" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">8.3</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Yêu Nhau Mùa Ế - Low Season - (C16)</p>
+                                                <p class="time">100 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie13.png" alt="movie13" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.8</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>Cuộc Phiêu Lưu Của Scooby-doo! - Scoob! -
+                                                    (P)</p>
+                                                <p class="time">100 phút - 5.7 IMDb</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie14.png" alt="movie14" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">5.6</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>C16</span>Ngôi Đền Kì Quái - Pee Nak 2 - (C16)
+                                                </p>
+                                                <p class="time">115 phút</p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="tag">
+                                        <div class="image">
+                                            <img src="./img/movie15.png" alt="movie15" class="img-fluid">
+                                            <span class="point-film">
+                                                <p class="point">7.6</p>
+                                                <p class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    1/2
+                                                </p>
+                                            </span>
+                                            <a class="venobox btn-trailer" data-vbtype="video"
+                                                href="https://www.youtube.com/watch?v=R3_Wu7fbBbc"><img
+                                                    src="./img/play-video.png" alt="play-video" class="img-fluid"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content__group">
+                                                <p class="title"><span>P</span>SÓI 100% - 100% WOLF - (P)</p>
+                                                <p class="time">96 phút </p>
+                                            </div>
+                                            <div class="content__button">
+                                                <button class="btn btn-warning btn-pay">Mua Vé</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cinemablock">
+        <div class="space"></div>
+        <div class="container cinema">
+            <!-- Nav pills -->
+            <ul class="nav nav-pills ">
+                <li class="nav-item">
+                    <a class="nav-link " id="defaultOpen"
+                        onclick="openCity(event, 'CGV_cinema','nav-link','tab_content')">
+                        <img src="./img/cgv_logo.png" alt="cgv_logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " onclick="openCity(event, 'BHD_cinema','nav-link','tab_content')">
+                        <img src="./img/BHD_logo.png" alt="BHD_logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " onclick="openCity(event, 'galaxy_cinema','nav-link','tab_content')">
+                        <img src="./img/galaxy_logo.png" alt="galaxy_logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " onclick="openCity(event, 's3img_cinema','nav-link','tab_content')">
+                        <img src="./img/s3img_logo.png" alt="s3img_logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " onclick="openCity(event, 'DDC_cinema','nav-link','tab_content')">
+                        <img src="./img/DDC_logo.png" alt="DDC_logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " onclick="openCity(event, 'Mega_cinema','nav-link','tab_content')">
+                        <img src="./img/Mega_logo.png" alt="Mega_logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " onclick="openCity(event, 'Dcine_cinema','nav-link','tab_content')">
+                        <img src="./img/Dcine_logo.jpg" alt="Dcine_logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " onclick="openCity(event, 'lotte_cinema','nav-link','tab_content')">
+                        <img src="./img/lotte_logo.png" alt="lotte_logo" class="img-fluid">
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab_content" id="CGV_cinema">
+                <!-- navbill -->
+                <div class="d-flex">
+                    <ul class="nav nav-Child ">
+                        <li class="nav-item">
+                            <div class="nav-link-cine" id="defaultOpen_cine"
+                                onclick="openCity(event, 'CGV_cinema_child_1','nav-link-cine','CGV_cinema_child')">
+                                <img src="./img/CGV_movie_theater.jpg" alt="CGV_movie_theater" class="img-fluid">
+                                <span>
+                                    <p class="name">
+                                        <span>CGV</span>-Aeon Bình Tân
+                                    </p>
+                                    <p class="address">
+                                        Tầng 3, Trung tâm thương mại Aeon Mall Bình Tân, Số 1 đường số 17A, khu phố 11,
+                                        phường Bình Trị Đông B, quận Bình Tân, TPHCM
+                                    </p>
+                                    <a href="" class="detail">
+                                        [chi tiết]
+                                    </a>
+                                </span>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link-cine"
+                                onclick="openCity(event, 'CGV_cinema_child_2','nav-link-cine','CGV_cinema_child')">
+                                <img src="./img/CGV_movie_theater.jpg" alt="CGV_movie_theater" class="img-fluid">
+                                <span>
+                                    <p class="name">
+                                        <span>CGV</span>
+                                        - Hùng Vương Plaza
+                                    </p>
+                                    <p class="address">
+                                        Tầng 7 | Hùng Vương Plaza 126 Hùng Vương Quận 5 Tp. Hồ Chí Minh
+                                    </p>
+                                    <a href="" class="detail">
+                                        [chi tiết]
+                                    </a>
+                                </span>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- tab-content -->
+                    <div>
+                        <div class="CGV_cinema_child" id="CGV_cinema_child_1">
+                            <div class="film-item">
+                                <div class="d-flex">
+                                    <img src="./img/movie1.png" alt="movie1" class="img-fluid">
+                                    <div class="content">
+                                        <p class="name">
+                                            <span>C18</span>
+                                            Bán Đảo - Peninsula - (C18)
+                                        </p>
+                                        <p class="timer">100 phút - TIX 7.1 - IMDb 0</p>
+                                    </div>
+                                </div>
+                                <p class="type">2D Digital</p>
+                                <a href="#" class="timeStart">
+                                    <span>20:00</span>~21:40
+                                </a>
+                            </div>
+                            <div class="film-item">
+                                <div class="d-flex">
+                                    <img src="./img/movie2.jpg" alt="movie2" class="img-fluid">
+                                    <div class="content">
+                                        <p class="name">
+                                            <span>C18</span>
+                                            Bán Đảo - Peninsula - (C18)
+                                        </p>
+                                        <p class="timer">100 phút - TIX 7.1 - IMDb 0</p>
+                                    </div>
+                                </div>
+                                <p class="type">2D Digital</p>
+                                <a href="#" class="timeStart">
+                                    <span>20:00</span>~21:40
+                                </a>
+                            </div>
+                            <div class="film-item">
+                                <div class="d-flex">
+                                    <img src="./img/movie3.png" alt="movie3" class="img-fluid">
+                                    <div class="content">
+                                        <p class="name">
+                                            <span>C18</span>
+                                            Bán Đảo - Peninsula - (C18)
+                                        </p>
+                                        <p class="timer">100 phút - TIX 7.1 - IMDb 0</p>
+                                    </div>
+                                </div>
+                                <p class="type">2D Digital</p>
+                                <a href="#" class="timeStart">
+                                    <span>20:00</span>~21:40
+                                </a>
+                            </div>
+                        </div>
+                        <div class="CGV_cinema_child" id="CGV_cinema_child_2">
+                            <div class="film-item">
+                                <div class="d-flex">
+                                    <img src="./img/movie4.png" alt="movie4" class="img-fluid">
+                                    <div class="content">
+                                        <p class="name">
+                                            <span>C18</span>
+                                            Bán Đảo - Peninsula - (C18)
+                                        </p>
+                                        <p class="timer">100 phút - TIX 7.1 - IMDb 0</p>
+                                    </div>
+                                </div>
+                                <p class="type">2D Digital</p>
+                                <a href="#" class="timeStart">
+                                    <span>20:00</span>~21:40
+                                </a>
+                            </div>
+                            <div class="film-item">
+                                <div class="d-flex">
+                                    <img src="./img/movie5.png" alt="movie5" class="img-fluid">
+                                    <div class="content">
+                                        <p class="name">
+                                            <span>C18</span>
+                                            Bán Đảo - Peninsula - (C18)
+                                        </p>
+                                        <p class="timer">100 phút - TIX 7.1 - IMDb 0</p>
+                                    </div>
+                                </div>
+                                <p class="type">2D Digital</p>
+                                <a href="#" class="timeStart">
+                                    <span>20:00</span>~21:40
+                                </a>
+                            </div>
+                            <div class="film-item">
+                                <div class="d-flex">
+                                    <img src="./img/movie6.png" alt="movie6" class="img-fluid">
+                                    <div class="content">
+                                        <p class="name">
+                                            <span>C18</span>
+                                            Bán Đảo - Peninsula - (C18)
+                                        </p>
+                                        <p class="timer">100 phút - TIX 7.1 - IMDb 0</p>
+                                    </div>
+                                </div>
+                                <p class="type">2D Digital</p>
+                                <a href="#" class="timeStart">
+                                    <span>20:00</span>~21:40
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="tab_content" id="BHD_cinema">BHD</div>
+            <div class="tab_content" id="galaxy_cinema">galaxy_cinema</div>
+            <div class="tab_content" id="s3img_cinema">s3img_cinema</div>
+            <div class="tab_content" id="DDC_cinema">DDC_cinema</div>
+            <div class="tab_content" id="Mega_cinema">Mega_cinema</div>
+            <div class="tab_content" id="Dcine_cinema">Dcine_cinema</div>
+            <div class="tab_content" id="lotte_cinema">lotte_cinema</div>
+        </div>
+
     </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -127,7 +1354,9 @@
     <!-- boostrap.bundle.min.js included popper.min.js and bootstrap.min.js -->
     <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="./plugins/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <!--venobox -->
+    <script type="text/javascript" src="./plugins/venobox/venobox.min.js"></script>
     <!-- function open side navbar -->
     <script>
         function openNav() {
@@ -143,16 +1372,52 @@
         $(document).ready(function () {
             $(".slick__carousel").slick({
                 infinite: true,
-                speed: 200,
+                speed: 500,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true,
-                dots:true,
+                dots: true,
                 responsive: [
-        ],
+                ],
+            });
+            $(".slick-movie").slick({
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                centerPadding: '15px',
+                responsive: [
+                ],
+            });
+            $(".venobox").venobox({
+                autoplay: true,
+                overlayColor: 'rgba(29, 28, 28, 0.685)',
+                spinner: 'wave',
             });
         });
 
     </script>
+    <!-- function open tab -->
+    <script>
+        function openCity(evt, cinema, nav_link, tab_content) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName(tab_content);
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName(nav_link);
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cinema).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        document.getElementById("defaultOpen_cine").click();
+    </script>
 </body>
+
 </html>
