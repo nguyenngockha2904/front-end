@@ -3,6 +3,20 @@
   padding: 0;
   box-sizing: border-box; }
 
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.835); }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
 body {
   font-size: 14px;
   line-height: 1.42857143;
@@ -448,17 +462,34 @@ header {
   max-width: 960px;
   display: flex;
   border-radius: 10px;
-  border: 1px solid #acaaaa9d; }
+  border: 1px solid #acaaaa9d;
+  max-height: 630px; }
   #cinemablock .cinema.container {
     padding: 0; }
   #cinemablock .cinema .nav-pills {
     max-width: 10%;
-    border-top-left-radius: 5px; }
+    border-top-left-radius: 5px;
+    display: flow-root;
+    height: 626px;
+    overflow-y: scroll;
+    overflow-x: unset;
+    scroll-behavior: smooth;
+    /* Handle */
+    /* Handle on hover */ }
+    #cinemablock .cinema .nav-pills::-webkit-scrollbar {
+      width: 5px; }
+    #cinemablock .cinema .nav-pills::-webkit-scrollbar {
+      width: 3px; }
+    #cinemablock .cinema .nav-pills::-webkit-scrollbar-track {
+      background: #ecebeb; }
+    #cinemablock .cinema .nav-pills::-webkit-scrollbar-thumb {
+      background: rgba(136, 136, 136, 0.527); }
+    #cinemablock .cinema .nav-pills::-webkit-scrollbar-thumb:hover {
+      background: rgba(85, 85, 85, 0.698); }
     #cinemablock .cinema .nav-pills .nav-item {
       position: relative;
       width: 100%;
       padding: 20px 20px;
-      border-right: 1px solid #acaaaad7;
       border-top: none;
       cursor: pointer; }
       #cinemablock .cinema .nav-pills .nav-item .nav-link {
@@ -486,16 +517,32 @@ header {
       #cinemablock .cinema .nav-pills .nav-item:hover .nav-link {
         opacity: 1; }
   #cinemablock .cinema .tab_content {
-    width: 100%; }
+    width: 100%;
+    max-width: 90%; }
     #cinemablock .cinema .tab_content .nav-Child {
-      max-width: 32%;
-      display: flow-root; }
+      max-width: 35%;
+      display: flow-root;
+      height: 626px;
+      overflow-y: scroll;
+      overflow-x: unset;
+      scroll-behavior: smooth;
+      /* Handle */
+      /* Handle on hover */ }
+      #cinemablock .cinema .tab_content .nav-Child::-webkit-scrollbar {
+        width: 5px; }
+      #cinemablock .cinema .tab_content .nav-Child::-webkit-scrollbar {
+        width: 3px; }
+      #cinemablock .cinema .tab_content .nav-Child::-webkit-scrollbar-track {
+        background: #ecebeb; }
+      #cinemablock .cinema .tab_content .nav-Child::-webkit-scrollbar-thumb {
+        background: rgba(136, 136, 136, 0.527); }
+      #cinemablock .cinema .tab_content .nav-Child::-webkit-scrollbar-thumb:hover {
+        background: rgba(85, 85, 85, 0.698); }
       #cinemablock .cinema .tab_content .nav-Child .nav-item {
         position: relative;
         width: 100%;
         height: 76px;
-        padding: 8px 20px;
-        border-right: 1px solid #8686869e; }
+        padding: 8px 20px; }
         #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine {
           display: flex;
           padding: 5px;
@@ -507,24 +554,27 @@ header {
             width: 50px;
             height: 50px;
             margin-right: 10px; }
-          #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine .name {
-            margin: 0;
-            font-size: 14px;
-            color: #000;
-            font-weight: 500; }
-            #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine .name span {
-              color: #e71a0f; }
-          #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine .address {
-            margin: 0;
-            font-size: 12px;
-            color: #949494;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 167px; }
-          #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine .detail {
-            color: #fb4226 !important;
-            font-size: 12px; }
+          #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine span {
+            width: 78%; }
+            #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine span .name {
+              margin: 0;
+              font-size: 14px;
+              color: #000;
+              font-weight: 500; }
+              #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine span .name span {
+                color: #e71a0f; }
+            #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine span .address {
+              margin: 0;
+              font-size: 12px;
+              color: #949494;
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap; }
+            #cinemablock .cinema .tab_content .nav-Child .nav-item .nav-link-cine span .detail {
+              color: #fb4226 !important;
+              font-size: 12px;
+              cursor: pointer; }
         #cinemablock .cinema .tab_content .nav-Child .nav-item::after {
           content: "";
           position: absolute;
@@ -539,20 +589,33 @@ header {
           cursor: pointer; }
           #cinemablock .cinema .tab_content .nav-Child .nav-item:hover .nav-link-cine {
             opacity: 1; }
-    #cinemablock .cinema .tab_content .CGV_cinema_child {
+    #cinemablock .cinema .tab_content .tab_child .cinema_child {
       padding: 8px 20px;
-      width: 100%; }
-      #cinemablock .cinema .tab_content .CGV_cinema_child .film-item {
+      width: 100%;
+      height: 626px;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      /* Handle */
+      /* Handle on hover */ }
+      #cinemablock .cinema .tab_content .tab_child .cinema_child::-webkit-scrollbar {
+        width: 3px; }
+      #cinemablock .cinema .tab_content .tab_child .cinema_child::-webkit-scrollbar-track {
+        background: #ecebeb; }
+      #cinemablock .cinema .tab_content .tab_child .cinema_child::-webkit-scrollbar-thumb {
+        background: rgba(136, 136, 136, 0.527); }
+      #cinemablock .cinema .tab_content .tab_child .cinema_child::-webkit-scrollbar-thumb:hover {
+        background: rgba(85, 85, 85, 0.698); }
+      #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item {
         position: relative;
         width: 100%;
         padding: 10px; }
-        #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .d-flex {
+        #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .d-flex {
           align-items: center; }
-          #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .d-flex .img-fluid {
+          #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .d-flex .img-fluid {
             width: 50px;
             height: 50px;
             margin-right: 10px; }
-          #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .d-flex .content .name {
+          #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .d-flex .content .name {
             margin: 0;
             font-size: 14px;
             display: block;
@@ -561,7 +624,7 @@ header {
             overflow: hidden;
             text-overflow: ellipsis;
             color: #000; }
-            #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .d-flex .content .name span {
+            #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .d-flex .content .name span {
               background-color: #fb4226;
               color: #fff;
               border-radius: 4px;
@@ -571,27 +634,26 @@ header {
               font-size: 12px;
               min-width: 33px;
               text-align: center; }
-          #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .d-flex .content .timer {
+          #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .d-flex .content .timer {
             margin: 0;
             line-height: 1.7;
             font-size: 12px;
             color: #9b9b9b; }
-          #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .d-flex:hover {
+          #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .d-flex:hover {
             cursor: pointer; }
-        #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .type {
+        #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .type {
           width: 100%;
           font-family: "SF Medium";
           font-size: 16px;
           color: #000;
           margin-top: 15px;
           margin-bottom: 5px; }
-        #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .timeStart {
+        #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .timeStart {
           margin-top: 20px;
-          width: calc(50% - 10px);
           font-size: 14px;
           font-weight: 400;
           margin: 16px 10px 10px 0;
-          padding: 5px 0;
+          padding: 5px 5px;
           transition: all 0.2s;
           text-decoration: none;
           display: block;
@@ -600,13 +662,13 @@ header {
           border-radius: 7px;
           color: #9b9b9b;
           border: 1px solid #e4e4e4; }
-          #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .timeStart span {
+          #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .timeStart span {
             font-size: 18px;
             font-weight: 500;
             color: #108f3e; }
-          #cinemablock .cinema .tab_content .CGV_cinema_child .film-item .timeStart:hover span {
+          #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item .timeStart:hover span {
             color: #fb4226; }
-        #cinemablock .cinema .tab_content .CGV_cinema_child .film-item::after {
+        #cinemablock .cinema .tab_content .tab_child .cinema_child .film-item::after {
           content: "";
           height: 1px;
           width: 80%;
@@ -614,5 +676,14 @@ header {
           position: absolute;
           bottom: 0;
           left: 0; }
+@media screen and (max-width: 769px) {
+  #cinemablock .cinema {
+    max-width: 720px; }
+    #cinemablock .cinema .tab_content .nav-Child {
+      width: 100% !important;
+      max-width: 50%; } }
+@media screen and (max-width: 576px) {
+  #cinemablock .cinema {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
