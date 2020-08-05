@@ -2,3 +2,8 @@ patch: gui thuoc tinh nao thi sua thuoc tinh do
 put: ghi de
 post: tao moi
 get: lay 
+
+axios trả về promise
+
+đối tượng promise có 3 trạng thái 
+	pending(đang chờ), resolve(thành công) , reject(thất bại)
