@@ -1,0 +1,18 @@
+nếu ko dùng axios lấy data thì còn cách nào khác?
+	dùng thư viện request
+	dùng superegent
+	hoặc dùng hàm fetch() của JS
+
+
+ES6
+
+--------------------- Destructuring (bóc tách phần tử) ------------------------------
+ES6
+const student = {name: 'kha',age:12,email:'khanguyen1000@gmail.com'};
+const {name,age,email}=student;
+console.log(name);
+
+ES5
+const name= student.name;
+const age= student.age;
+const email= = student.email;
