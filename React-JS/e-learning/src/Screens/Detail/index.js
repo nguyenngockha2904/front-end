@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import { connect } from 'react-redux';
+import { fetchDetailCourses } from '../../Redux/Actions/course';
 class CourseDetailScreen extends Component {
     state = {
     }
@@ -13,31 +14,22 @@ class CourseDetailScreen extends Component {
         );
     }
     componentDidMount() {
-        console.log(this.state.maKhoaHoc);
-        Axios({
-            method: 'GET',
-            url: `http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=design_01`,
-        }).then((res) => {
-            this.props.dispatch({
-                type: 'FETCH_COURSE_DETAIL',
-                payload: res.data,
-            })
-        }).catch((err) => {
-            console.log(err);
-        })
+
+        this.props.dispatch(fetchDetailCourses(this.props.match.params.courseId));
+
     }
 }
 const MapStateToProps = (state) => ({
-    //kiểu dữ liệu ban đầu nó là null, lần chạy ban đầu thay vì lấy null, ta sẽ cho nó là 1 object
+    //kiểu dữ liệu ban đầu nó là null, lần chạy )ban đầu thay vì lấy null, ta sẽ cho nó là 1 object
     CourseDetail: state.course.courseDetail || {
-        maKhoaHoc:'',
-        tenKhoaHoc:'',
-        hinhAnh:'',
-        nguoiTao:{
-            taiKhoan:'',
-            hoTen:''
+        maKhoaHoc: '',
+        tenKhoaHoc: '',
+        hinhAnh: '',
+        nguoiTao: {
+            taiKhoan: '',
+            hoTen: ''
         }
-    } 
+    }
 })
 
 export default connect(MapStateToProps)(CourseDetailScreen);

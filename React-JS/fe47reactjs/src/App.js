@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Home from './exercise-2/Home/index'
+import Home from './exercise-2/Home/index';
+import DataBinding from './databinding';
+// import Car from './car-execise';
+import MovieExercise from './Movie-exercise';
+import HomeShopping from './shopping/Home';
 function App() {
   return (
     <div className="App">
-      <Home/>
+      <HomeShopping />
     </div>
   );
 }

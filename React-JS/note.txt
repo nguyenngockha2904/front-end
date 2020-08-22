@@ -1,1 +1,27 @@
 Jss
+
+showMessage(mes){
+	console.log(mes);
+}
+onClink={this.showMessage('kha')}
+
+khi showMessage có cặp ngoặc tròn thì mặt định tự chạy
+
+nên để khi muốn click thì nó ms chạy thì ta nên dùng arrow function
+
+onClick= {() => {this.show('kha')}}
+
+
+-----closure
+một hàm chạy return về 1 hàm khác 
+
+State và props khác nhau?
+ -
+ 	state : render lại giao diện
+ 	props : truyền dữ liệu
+ -	
+	state :chỉ có ở class component
+	props :ở đâu cũng có
+ -	
+	state : dc phép đổi dữ liệu
+	props : ko dc phép tự sửa dữ liệu

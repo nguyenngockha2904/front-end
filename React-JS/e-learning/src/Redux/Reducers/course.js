@@ -1,3 +1,4 @@
+import { FETCH_COURSES, FETCH_COURSE_DETAIL } from "../Actions/type";
 
 //giá trị ban đầu của course khi ta lưu trên store là gì 
 let initialState = {
@@ -14,11 +15,11 @@ let initialState = {
 //tạm chưa có action nên khi gọi .thì mặc định vào dữ liệu gì ra dữ liệu đó.
 const CourseReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'FETCH_COURSES': {
+        case FETCH_COURSES: {
             state.courses = action.payload;
             return { ...state };
         }
-        case 'FETCH_COURSE_DETAIL': {
+        case FETCH_COURSE_DETAIL: {
             state.courseDetail = action.payload;
             return { ...state };
         }
