@@ -10,6 +10,9 @@ class ProductItem extends Component {
     handleViewDetail = (data) => () => {
         this.props.getProduct(data);
     }
+    handlePushToListCart = (data) => () => {
+        this.props.pushToListCart(data);
+    }
     render() {
         const { name, desc, img } = this.props.item;
         return (
@@ -21,6 +24,7 @@ class ProductItem extends Component {
                     {this.state.isShowDesc && <p>{desc}</p>}
                     <button className="btn btn-outline-success mr-5" onClick={this.handleViewDetail(this.props.item)}>Xem chi tiết</button>
                     <button className="btn btn-outline-primary" onClick={this.handleToggleDescription}>{this.state.isShowDesc ? 'Ẩn mô tả' : 'Hiện mô tả'}</button>
+                    <button className="btn btn-outline-dark" onClick={this.handlePushToListCart(this.props.item)}>giỏ hàng</button>
                 </div>
             </div>
         );

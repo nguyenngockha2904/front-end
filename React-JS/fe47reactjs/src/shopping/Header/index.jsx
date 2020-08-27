@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../assets/img/logo (1).png'
 import classes from './style.module.css';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 class Header extends Component {
     render() {
         return (
@@ -35,7 +36,9 @@ class Header extends Component {
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            <ShoppingCartOutlinedIcon
+                                data-toggle="modal" data-target="#modelId"
+                                className={classes.cartIcon} />
                         </form>
                     </div>
                 </nav>

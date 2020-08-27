@@ -1,3 +1,7 @@
 .logo {
   width: 100px;
 }
+.cartIcon {
+  align-self: center;
+  font-size: 30px !important;
+}

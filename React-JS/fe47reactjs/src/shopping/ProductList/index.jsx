@@ -6,7 +6,8 @@ class ProductList extends Component {
         return this.props.item.map((item, index) => {
             return (
                 <div className="col-4" key={index}>
-                    <ProductItem item={item} getProduct={this.props.getProduct} />
+                    <ProductItem item={item} getProduct={this.props.getProduct}
+                        pushToListCart={this.props.pushToListCart} />
                 </div>
             )
         })

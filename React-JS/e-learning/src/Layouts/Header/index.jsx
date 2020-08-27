@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../Assets/Images/Logo.png';
 import classes from './style.module.css';
+import { connect } from 'react-redux';
 class Header extends Component {
     render() {
         return (
@@ -18,12 +19,18 @@ class Header extends Component {
                             </li>
                         </ul>
                         <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <NavLink activeStyle={{ color: 'red' }} to="/signup" exact className="nav-link">Đăng kí</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink activeStyle={{ color: 'red' }} to="/signin" exact className="nav-link">Đăng nhập</NavLink>
-                            </li>
+                            {this.props.credentials ? <li className="nav-item">
+                                <span className="nav-link">Hi,{this.props.credentials.hoTen}</span>
+                            </li> :
+                                <>
+                                    <li className="nav-item">
+                                        <NavLink activeStyle={{ color: 'red' }} to="/signup" exact className="nav-link">Đăng kí</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink activeStyle={{ color: 'red' }} to="/signin" exact className="nav-link">Đăng nhập</NavLink>
+                                    </li>
+                                </>
+                            }
                         </ul>
                     </div>
                 </nav>
@@ -32,4 +39,10 @@ class Header extends Component {
     }
 }
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+        credentials: state.user.credentials,
+    }
+}
+
+export default connect(mapStateToProps)(Header);

@@ -28,7 +28,10 @@ class Detail extends Component {
                                 </tr>
                                 <tr>
                                     <td>Giá tiền</td>
-                                    <td>{price}</td>
+                                    <td>{new Intl.NumberFormat('vi-VI', {
+                                        style: 'currency',
+                                        currency: 'VND',
+                                    }).format(price)}</td>
                                 </tr>
                             </tbody>
                         </table>
