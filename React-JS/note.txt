@@ -25,3 +25,44 @@ State và props khác nhau?
  -	
 	state : dc phép đổi dữ liệu
 	props : ko dc phép tự sửa dữ liệu
+
+
+
+** Single Page App
+ưu điểm : performance tốt load nhanh
+nhược điểm : 
+	-client-side: tất cả code viết ra đều do user sử lý
+	-giảm SEO(khả năng tìm kiếm của Google)
+khắc phục dùng framework nextJS (server side)
+** multiple pages App
+ưu điểm : 
+	-server side tất cả code do server xử lý
+	-SEO mạnh
+nhược điểm: chậm
+
+
+
+----các bước giải quyết bài toán react
+
+ -1 dàn layout (làm giao diện đọc lập)
+ -2 xác định nguồn dữ liệu thay đổi, tổ chức lưu trữ(dùng kiểu dữ liệu nào để lưu trữ:chuỗi,mảng, mảng object, object) =>state
+ -3 xử lý chức năng làm thay đổi state.
+
+
+
+--------PureComponent--- giúp cho việc khi ta render component cha
+nhưng component con ko có gì thây đổi và ko mún render lại component con
+thì ta dùng PureComponent có tất cả các chứ năng như 1 Class Component bình thường...
+	NHƯỢC DIỂM: đôi vs những kiểu dữ liệu cơ bản. nó có thể nhận ra sự thay đổi của props nó render lại.
+	nhưng đối với kiểu dữ liệu phức tạp nhưng mảng , object thì nó ko thể so sánh .nên khi ta muốn component con render lại khi props có kiểu {} [] thì ko thể render.
+----------memo--------- có chức năng tương tự như PureComponent---dùng trong function component
+
+
+
+----ajax là công nghệ kết nối FE vs BE 
+cụ thể là axios
+
+
+---- setup thư viện
+
+npm i redux react-redux 

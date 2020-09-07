@@ -114,8 +114,8 @@ const renderEmpl = function (list = empList.arr) {
   document.getElementById("tbodyEmpl").innerHTML = htmlContent;
 };
 // function viewDetail
-const gotoDetail= function(id){
-  window.location.assign('detail.html?id='+id);
+const gotoDetail = function (id) {
+  window.location.assign('detail.html?id=' + id);
 }
 
 

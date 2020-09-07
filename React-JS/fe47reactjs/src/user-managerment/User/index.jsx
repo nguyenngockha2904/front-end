@@ -1,7 +1,21 @@
 import React, { Component } from "react";
 import UserItem from "../userItem";
-
+import { connect } from 'react-redux';
 class Users extends Component {
+  renderListUser() {
+    return this.props.filter ?
+      this.props.userList.filter(item => item.type.toLowerCase() === this.props.filter.toLowerCase()).map((item, index) => {
+        return (
+          <UserItem item={item} key={index} />
+        )
+      }) :
+      this.props.userList.map((item, index) => {
+        return (
+          <UserItem item={item} key={index} />
+        )
+      })
+
+  }
   render() {
     return (
       <div>
@@ -16,14 +30,17 @@ class Users extends Component {
             </tr>
           </thead>
           <tbody>
-            <UserItem />
-            <UserItem />
-            <UserItem />
+            {this.renderListUser()}
           </tbody>
         </table>
       </div>
     );
   }
 }
-
-export default Users;
+const mapStateToProps = state => {
+  return {
+    userList: state.userList,
+    filter: state.filter,
+  }
+}
+export default connect(mapStateToProps)(Users);

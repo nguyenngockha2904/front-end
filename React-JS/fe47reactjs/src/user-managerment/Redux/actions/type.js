@@ -1,0 +1,11 @@
+export const SHOW_MODAL = 'SHOW_MODAL';
+export const HIDE_MODAL = 'HIDE_MODAL';
+export const ADD_USER = 'ADD_USER';
+export const DELETE_USER = 'DELETE_USER';
+export const EDIT_USER = 'EDIT_USER';
+export const FIND_USER = 'FIND_USER';
+export const THEM_SV = 'THEM_SV';
+export const SHOW_SV = 'SHOW_SV';
+export const XOA_SV = 'XOA_SV';
+export const SUA_SV = 'SUA_SV';
+export const FET_DATA_MOVIE = 'FET_DATA_MOVIE'; 

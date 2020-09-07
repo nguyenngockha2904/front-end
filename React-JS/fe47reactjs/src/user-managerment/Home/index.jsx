@@ -2,31 +2,27 @@ import React, { Component } from "react";
 import Search from "../Search";
 import Users from "../User";
 import Modal from "../Modal";
+import { connect } from 'react-redux';
+import { SHOW_MODAL } from "../Redux/actions/type";
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userList: [
-        {
-          id: 1,
-          name: "Dinh Phuc Nguyen",
-          username: "dpnguyen",
-          email: "dpnguyen@gmail.com",
-          phoneNumber: "1123123213",
-          type: "VIP"
-        },
-        {
-          id: 2,
-          name: "Nguyen Dinh Phuc",
-          username: "nguyendp",
-          email: "nguyendp@gmail.com",
-          phoneNumber: "1123123213",
-          type: "VIP"
-        }
-      ]
-    };
+  handleToggleDisplayModal = () => {
+    console.log(this.props.showModal);
   }
 
+  handleAddUser = () => {
+    // action là 1 object : type,payload
+    const action = {
+      type: SHOW_MODAL,//đặt tả yêu cầu
+      payload: {
+        username: '',
+        name: '',
+        email: '',
+        phoneNumber: '',
+        type: '',
+      },
+    };
+    this.props.dispatch(action);
+  }
   render() {
     return (
       <div className="container">
@@ -34,18 +30,23 @@ class Home extends Component {
         <div className="d-flex justify-content-between align-items-center">
           <Search />
           <button
-            className="btn btn-success"
-            data-toggle="modal"
-            data-target="#modelIdUser"
+            className="btn btn-outline-success"
+            onClick={this.handleAddUser}
           >
             Add User
           </button>
         </div>
         <Users />
-        <Modal />
+        {this.props.showModal && <Modal />}
       </div>
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    showModal: state.showModal[0]
+  }
+}
 
-export default Home;
+
+export default connect(mapStateToProps)(Home);
