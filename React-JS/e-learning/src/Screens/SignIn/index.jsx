@@ -29,7 +29,7 @@ class SignInScreen extends Component {
                             />
                         </div>
                         <div className="text-center">
-                            <button className="btn btn-success">Đăng nhập</button>
+                            <button type='button' className="btn btn-success">Đăng nhập</button>
                         </div>
                     </Form>
                 )} />
