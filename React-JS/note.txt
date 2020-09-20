@@ -66,3 +66,45 @@ cụ thể là axios
 ---- setup thư viện
 
 npm i redux react-redux 
+
+
+HOCs = High Order component
+ là gì? 
+	là những cái connect() withStyle() ....
+	khái niện:
+	1-là 1 component dùng để wrap 1 component khác lại
+		công dụng:
+	giúp cho việc tái sử dụng giao diện.
+	2- là function nhận vào tham số la 1 component và return lại 1 component
+
+
+
+
+hosting 
+
+b1  npm install -g firebase-tools
+b2  firebase login
+b3  npm run build
+b4 firebase init
+	mũi tên chọn Hosting Configure...
+	nhấn space để chon 
+	nhấn enter để next
+	tất cả đều yes (riêng overwrite chọn NO) 
+b5 firebase deploy
+
+
+
+hook 
+	dùng thì dẽ gọn gàng nhưng khó kiểm soát
+	và nếu kiểm soát k tốt thì nó sẽ làm chậm ứng dụng
+đối với class component thì setstate thì chỉ render lại hàm render()
+nhưng đối với hook thì nó sẽ render lại tất cả những gì nó có nên ta phải dùng
+useCallBack để bọc hàm và useMemo để dùng cho biến để tránh tình trạng render lại những 
+hàm và biến ko cần render lại 
+	dùng useCallBack useMemo để kiểm soát performent 
+
+
+//promise chaining chạy axios tuần tự khi axios này xong thì thực thi axios khác
+
+//promise.all dùng để chạy tất các axios cùng lúc (call song song và chờ kq 1 lần)
+  Promise.all(Axios(),Axios(),Axios());
