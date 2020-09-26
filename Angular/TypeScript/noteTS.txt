@@ -1,0 +1,36 @@
+"outDir": "./build" /* là nơi build từ code typescript qua javaScript */
+key = 'name';
+obj = {name :'kha',age:21};
+obj.name  -> kha
+obj[key]  <--> obj.name
+
+// duyệt object
+Object.keys(sinhVien).map((item) => console.log(sinhVien[item]));
+interface INhanVien {
+  // property
+  hoTen: string;
+  tuoi: number;
+  chucVu: string;
+  // method
+  thucHienCongViec(): void;
+  tinhLuong(): number;
+}
+
+class NhanVienThietKe implements INhanVien {
+  hoTen: string;
+  tuoi: number;
+  chucVu: string;
+
+  constructor(hoTen: string, tuoi: number, chucVu: string) {
+    this.hoTen = hoTen;
+    this.tuoi = tuoi;
+    this.chucVu = chucVu;
+  }
+
+  thucHienCongViec(): void {
+    console.log("nhân viên thiết kế");
+  }
+  tinhLuong(): number {
+    return 0;
+  }
+}
