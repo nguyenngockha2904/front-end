@@ -1,0 +1,16 @@
+.formRegister {
+  .title {
+  }
+  .formGroup {
+    label {
+      color: gray;
+    }
+    input {
+      width: 80%;
+    }
+  }
+  .btnSubmit {
+    background-color: green;
+    color: white;
+  }
+}

@@ -1,0 +1,34 @@
+<!-- interpolation -->
+<p>{{message}}</p>
+
+<!-- property binding -->
+<input type="text" [value]="message">
+<button [disabled]="disable">Click</button>
+<br />
+<br />
+<br />
+<br />
+<!-- event binding -->
+<button (click)="changeMessage('Hi I`m Kha')">Change message</button>
+<br />
+<br />
+<br />
+<br />
+<p>{{username}}</p>
+<input type="text" #name>
+<!-- #name tức là DOM dến thẻ input đó lưu ý tên tham chiếu #name phải khác với tên biến trong componnent.ts -->
+<button (click)="changeUsername(name)">Change Username</button>
+<br />
+<br />
+<br />
+<br />
+<p>{{email}}</p>
+
+<input type="text" (input)="changeEmail($event)">
+<!-- bên react thì sự kiện là onChange nhưng bên Angular thì sự kiện là (input) -->
+<!-- $event bắt bột phải viết như v mới nhận dc đối tưởng event  -->
+
+
+<!-- dùng FormModule của angular tự động thay đổi giá trị và cập nhật giá trị  twoway bind -->
+<p>{{address}}</p>
+<input type="text" [(ngModel)]='address'>
