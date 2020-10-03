@@ -1,0 +1,110 @@
+import { Button, makeStyles } from '@material-ui/core';
+import React, { Fragment, useCallback, useMemo, useState } from 'react';
+import bn1 from '../../assets/img/panner1.jpg';
+import bn2 from '../../assets/img/panner2.png';
+import bn3 from '../../assets/img/panner3.png';
+const useStyle = makeStyles({
+    slider: {
+        position: 'relative',
+        width: '100%',
+        height: '100vh',
+        boxSizing: 'border-box',
+        margin: 0,
+        padding: 0,
+        display: 'flex',
+        alignItems: 'center',
+        overflow: 'hidden',
+    },
+    slide: {
+        position: 'relative',
+        minWidth: '100%',
+        height: '100vh',
+        transition: '1s',
+        overflow: 'hidden',
+    },
+    btnCustom: {
+        position: 'absolute',
+        top: '50%',
+        transform: "translate(0, -50%)",
+        height: '100%',
+        width: '10%',
+        outline: 'none',
+        transition: '5s',
+        '&:hover': {
+            background: 'rgba(0,0,0,0.356)',
+        }
+    },
+    btnPrev: {
+        left: 0,
+    },
+    btnNext: {
+        right: 0,
+    },
+    img: {
+        width: '100%',
+    }
+});
+const Carousel = () => {
+    const classes = useStyle();
+    const [x, setX] = useState(0);
+    const tutorialSteps = useMemo(() => {
+        return [
+            {
+                label: 'San Francisco – Oakland Bay Bridge, United States',
+                imgPath: bn1,
+            },
+            {
+                label: 'Bird',
+                imgPath: bn2,
+            },
+            {
+                label: 'Bali, Indonesia',
+                imgPath: bn3,
+            },
+
+        ]
+    }, []);
+    const renderCarousel = useCallback(() => {
+        return tutorialSteps.map((item, index) => {
+            return (
+                <div
+                    key={index}
+                    className={classes.slide}
+                    style={{ transform: `translateX(${x}%)` }}
+                >
+                    <img src={item.imgPath} alt={item.label} className={classes.img} />
+                </div>
+            )
+        })
+    }, [x, tutorialSteps]);
+
+    const goPrev = useCallback(() => {
+        // goPrev 
+        x === 0 ? setX(-100 * (tutorialSteps.length - 1)) : setX(x + 100);
+    }, [x]);
+    const goNext = useCallback(() => {
+        // goNext
+        (x === -100 * (tutorialSteps.length - 1)) ? setX(0) : setX(x - 100);
+    }, [x]);
+    return (
+        <div
+            className={classes.slider}
+        >
+            {renderCarousel()}
+            <Button
+                className={`${classes.btnCustom} ${classes.btnPrev}`}
+                onClick={goPrev}
+            >
+                Left
+            </Button>
+            <Button
+                className={`${classes.btnCustom} ${classes.btnNext}`}
+                onClick={goNext}
+            >
+                Right
+            </Button>
+        </div>
+    );
+};
+
+export default Carousel;

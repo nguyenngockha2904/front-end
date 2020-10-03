@@ -1,0 +1,98 @@
+<!-- ngIf dùng để ẩn hiện component -->
+
+<p *ngIf="isShowing">structural-directives works!</p>
+<button (click)="handleShow()">Toggle</button>
+<!-- <button (click)="isShowing=!isShowing">Toggle</button> -->
+
+
+<!-- <div *ngIf="isLoggedIn">
+    <h3>Welcome back!</h3>
+    <button (click)="isLoggedIn=false">Log out</button>
+
+</div> -->
+<!-- c1 phủ định ngược lại -->
+<!-- <div *ngIf="!isLoggedIn">
+    <h3>Please login</h3>
+    <button (click)="isLoggedIn=true">login</button>
+</div> -->
+
+<!-- c2 dùng else -->
+<!-- những gì nằm trong ng-template mật định không dc hiển thị ra giao diện  -->
+<!-- nó chỉ dc hiển thị ra khi được gọi tới  -->
+<div *ngIf="isLoggedIn; else login">
+    <h3>Welcome back!</h3>
+    <button (click)="isLoggedIn=false">Log out</button>
+
+</div>
+<ng-template #login>
+    <div>
+        <h3>Please login</h3>
+        <button (click)="isLoggedIn=true">login</button>
+    </div>
+</ng-template>
+
+
+<br />
+<br />
+
+<div [ngSwitch]="color">
+    <!-- "red" là biến , "'red'":là chuỗi -->
+    <div *ngSwitchCase="'red'" style="background-color: red;">Màu Đỏ</div>
+    <div *ngSwitchCase="'blue'" style="background-color: blue;">Màu Xanh</div>
+    <div *ngSwitchCase="'black'" style="background-color: black;">Màu Đen</div>
+    <div *ngSwitchCase="'yellow'" style="background-color: yellow;">Màu Vàng</div>
+    <div *ngSwitchCase="'white'" style="background-color: white;">Màu Trắng</div>
+    <div *ngSwitchCase="'brown'" style="background-color: brown;">Màu Nâu</div>
+    <div *ngSwitchDefault style="background-color: gray;">Màu bạc</div>
+</div>
+<!-- <input type="text" [(ngModel)]="color" /> -->
+
+<select [(ngModel)]="color">
+    <option value="">Default</option>
+    <option value="blue">Xanh</option>
+    <option value="red">Đỏ</option>
+    <option value="yellow">Vàng</option>
+    <option value="black">Đen</option>
+    <option value="brown">Nâu</option>
+
+</select>
+
+
+
+<!-- ngFor: duyệt mảng trong html -->
+<!-- <p *ngFor="let sv of dssv">
+    HoTen : {{sv.hoTen}} - Lớp : {{sv.lop}}
+
+</p> -->
+<!-- khác null khác undifine! -->
+<!-- <ng-container *ngIf="(dssv )"> -->
+<!-- lấy item và index -->
+<!-- <p *ngFor="let sv of dssv; let index =index"> -->
+<!-- HoTen : {{sv.hoTen}} - index : {{index}} -->
+<!-- </p> -->
+<!-- </ng-container> -->
+
+<ng-template #template>
+    <ng-container *ngIf="(dssv )">
+        <!-- lấy item và index -->
+        <p *ngFor="let sv of dssv; let index =index">
+            HoTen : {{sv.hoTen}} - index : {{index}}
+        </p>
+    </ng-container>
+</ng-template>
+
+<!-- ng-container + ng-template -->
+<ng-container *ngTemplateOutlet="template"></ng-container>
+<ng-container *ngTemplateOutlet="template"></ng-container>
+
+
+
+<app-card>
+    <div class="header">Sinh viên</div>
+    <div id="content">Lorem ipsum dolor sit amet consectetur.</div>
+    <!-- thường sử dụng cách này -->
+    <div slot="footer">
+        <button class="btn btn-success">Chi tiết</button>
+    </div>
+
+</app-card>

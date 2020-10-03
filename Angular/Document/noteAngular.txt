@@ -1,0 +1,7 @@
+component ko thể đứng độc lập dc 
+nó phải có 1 tk module quản lý nó
+
+
+import module 
+export component 
+gắn vào app .html

@@ -1,0 +1,28 @@
+<!-- ngFor: duyệt mảng trong html -->
+<p *ngFor="let sv of dssv">
+    HoTen : {{sv.hoTen}} - Lớp : {{sv.lop}}
+
+</p>
+<!-- lấy item và index -->
+<p *ngFor="let sv of dssv; let index =index">
+    HoTen : {{sv.hoTen}} - index : {{index}}
+
+</p>
+
+<div class="d-flex">
+    <ng-container ngIf="dssv"> // ng-container ko dc render ra giao diện tương tự react Frament
+        <!-- lấy item và index -->
+        <p *ngFor="let sv of dssv; let index =index">
+            HoTen : {{sv.hoTen}} - index : {{index}}
+        </p>
+    </ng-container>
+</div>
+
+
+!-- khác null khác undifine! -->
+<ng-container *ngIf="(dssv )"> / ng-container ko dc render ra giao diện tương tự react Frament
+    <!-- lấy item và index -->
+    <p *ngFor="let sv of dssv; let index =index">
+        HoTen : {{sv.hoTen}} - index : {{index}}
+    </p>
+</ng-container>

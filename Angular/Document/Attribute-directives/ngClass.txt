@@ -1,0 +1,18 @@
+< class="bg-primary" <!--key dk -->
+    [ngClass]="{'text-center':isActive"
+    <!-- nếu isActive true thì add thêm class text-center -->
+    <!-- ngược lại ko add-->
+    >
+    ngClass
+</>
+
+hoặc 
+
+< class="bg-primary" <!--key dk -->
+    [class]="{'text-center':isActive"
+    <!-- nếu isActive true thì add thêm class text-center -->
+    <!-- ngược lại ko add-->
+    >
+    ngClass
+</>
+ 

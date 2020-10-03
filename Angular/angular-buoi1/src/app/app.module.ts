@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { Baitap2Module } from './baitap2/baitap2.module';
 import { Baitap4Component } from './baitap4/baitap4.component';
+import { StructuralDirectivesModule } from './structural-directives/structural-directives.module';
+import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
+import { AttributeDirectiveModule } from './attribute-directive/attribute-directive.module';
 // có nhìu loại module
 // module do angular cung cấp : FormsModule ,RouterModule, HttpModule
 // module do dev tự định nghĩa
@@ -23,6 +26,8 @@ import { Baitap4Component } from './baitap4/baitap4.component';
     Baitap1Module,
     Baitap2Module,
     FormsModule,
+    StructuralDirectivesModule,
+    AttributeDirectiveModule,
   ],
   // nơi gắn các services vào
   providers: [],
