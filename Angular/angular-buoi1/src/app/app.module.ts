@@ -7,8 +7,9 @@ import { DemoComponent } from './demo/demo.component';
 import { Baitap2Module } from './baitap2/baitap2.module';
 import { Baitap4Component } from './baitap4/baitap4.component';
 import { StructuralDirectivesModule } from './structural-directives/structural-directives.module';
-import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
+import { Baitap5Module } from './baitap5/baitap5.module';
 import { AttributeDirectiveModule } from './attribute-directive/attribute-directive.module';
+import { Baitap6Module } from './baitap6/baitap6.module';
 // có nhìu loại module
 // module do angular cung cấp : FormsModule ,RouterModule, HttpModule
 // module do dev tự định nghĩa
@@ -28,6 +29,8 @@ import { AttributeDirectiveModule } from './attribute-directive/attribute-direct
     FormsModule,
     StructuralDirectivesModule,
     AttributeDirectiveModule,
+    Baitap5Module,
+    Baitap6Module,
   ],
   // nơi gắn các services vào
   providers: [],
