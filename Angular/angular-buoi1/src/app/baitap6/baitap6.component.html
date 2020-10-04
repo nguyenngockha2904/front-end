@@ -5,18 +5,18 @@
     <div class="px-3 my-4">
         <div class="form-group">
             <label>Mã SP</label>
-            <input type="text" class="form-control" [(ngModel)]="maSp">
+            <input type="text" class="form-control" #msp>
         </div>
         <div class="form-group">
             <label>Tên SP</label>
-            <input type="text" class="form-control" [(ngModel)]="tenSp">
+            <input type="text" class="form-control" #tsp>
         </div>
         <div class="form-group">
             <label>Giá</label>
-            <input type="text" class="form-control" [(ngModel)]="giaSp">
+            <input type="text" class="form-control" #gsp>
         </div>
         <div class="text-left">
-            <button class="btn btn-success" (click)="handleAdd()">Thêm sản phẩm</button>
+            <button class="btn btn-success" (click)="handleAdd(msp,tsp,gsp)">Thêm sản phẩm</button>
         </div>
     </div>
 </div>
@@ -32,7 +32,13 @@
     </thead>
     <tbody>
         <ng-container *ngIf="(listSp )">
-            <tr *ngFor="let sp of listSp; let index=index">
+            <tr *ngFor="
+                let sp of listSp; 
+                let index=index;
+                let isOdd =odd;
+                let isEven =even;
+                let total=count 
+                " [class]="{'bg-primary':isEven,'bg-secondary':isOdd}">
                 <td>{{index+1}}</td>
                 <td>{{sp.maSp}}</td>
                 <td>{{sp.tenSp}}</td>

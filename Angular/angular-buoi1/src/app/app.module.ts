@@ -10,6 +10,8 @@ import { StructuralDirectivesModule } from './structural-directives/structural-d
 import { Baitap5Module } from './baitap5/baitap5.module';
 import { AttributeDirectiveModule } from './attribute-directive/attribute-directive.module';
 import { Baitap6Module } from './baitap6/baitap6.module';
+import { InteractionModule } from './interaction/interaction.module';
+
 // có nhìu loại module
 // module do angular cung cấp : FormsModule ,RouterModule, HttpModule
 // module do dev tự định nghĩa
@@ -31,6 +33,7 @@ import { Baitap6Module } from './baitap6/baitap6.module';
     AttributeDirectiveModule,
     Baitap5Module,
     Baitap6Module,
+    InteractionModule,
   ],
   // nơi gắn các services vào
   providers: [],
