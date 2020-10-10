@@ -1,0 +1,7 @@
+<div class="w-100 text-center btn btn-default bg-dark text-white">Tài xế</div>
+
+<div class="row">
+    <div class="col-sm-3" *ngFor="let ghe of mangGhe">
+        <app-ge [ghe]="ghe" (onSelect)="handleSelect($event)"></app-ge>
+    </div>
+</div>

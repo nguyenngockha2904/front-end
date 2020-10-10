@@ -1,0 +1,4 @@
+<button class="btn btn-secondary w-100 my-2 btnGhe" [class]="{gheDaDat:ghe.trangThai,
+    getDangDat:isActived
+}
+" [disabled]="ghe.trangThai" (click)="datghe()">{{ghe.soGhe}}</button>

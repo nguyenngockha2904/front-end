@@ -7,7 +7,10 @@ import { SliderComponent } from './slider/slider.component';
 import { IndexcontentComponent } from './indexcontent/indexcontent.component';
 import { ItemComponent } from './item/item.component';
 import { IndexComponent } from './index/index.component';
-
+import {RouterModule,Routes} from '@angular/router';
+const routes:Routes=[
+  {path:'',component:Baitap2Component}
+]
 @NgModule({
   declarations: [
     Baitap2Component,
@@ -18,7 +21,7 @@ import { IndexComponent } from './index/index.component';
     ItemComponent,
     IndexComponent,
   ],
-  imports: [CommonModule],
-  exports: [Baitap2Component],
+  imports: [CommonModule,RouterModule.forChild(routes)],
+  exports: [ ],
 })
 export class Baitap2Module {}
